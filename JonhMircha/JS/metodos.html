@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Métodos estáticos, getters y setters</title>
+</head>
+<body>
+    <h1> Métodos estáticos, getters y setters</h1>
+
+    <script>
+        // Funcion contructora
+        function Animal(nombre,genero){
+            //Atributos 
+            this.nombre = nombre;
+            this.genero = genero;
+
+            //Metodos agregados al prototipo de la funcion constructora
+            Animal.prototype.sonar = function(){
+                console.log("Hago sonidos por que estoy vivo");
+            }
+            Animal.prototype.saludar = function(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }
+
+        //Herencia Prototipica
+        function Perro(nombre,genero,tamanio){
+            this.super = Animal; //Invocar funcion
+            this.super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+
+
+
+        class Perro extends Animal{
+            constructor(nombre,genero,tamanio){
+                //Con el metodo super se manda a llamar el constructor de la clase padre
+                super(nombre,genero);
+                this.tamanio = tamanio;
+            }
+
+            //Un metodo estatico se puede ejecutar sin necesidad de instanciar la clase
+
+            static queEres(){
+                console.log('Los perros somos los animales mamiferos que pertenecemos a la familia de los caninos');
+            }
+
+            //Metodos setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase.
+            
+
+        }
+
+        Perro.queEres();
+
+         
+    </script>
+</body>
+</html>
