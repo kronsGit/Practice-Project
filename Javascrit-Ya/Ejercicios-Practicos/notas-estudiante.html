@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de Estudiante</title>
+</head>
+<body>
+    <script>
+        let nota1,nota2,nota3,nombre;
+
+        nombre = prompt('Ingrese su nombre:');
+        nota1 = parseFloat(prompt('Ingrese la primera nota: '));
+        nota2 = parseFloat(prompt('Ingrese la segunda nota: '));
+        nota3 = parseFloat(prompt('Ingrese la tercera nota: '));
+
+     let sumaNotas = nota1+nota2+nota3;
+     let promedio = sumaNotas/3;
+
+     if(promedio >= 7){
+        alert(`El estudiante ${nombre} se promociono del curso con un promedio de ${promedio}`);
+     }else{
+        alert(`El estudiante ${nombre} reprobo el curso con un promedio de ${promedio}`);
+     }
+
+    </script>
+</body>
+</html>
