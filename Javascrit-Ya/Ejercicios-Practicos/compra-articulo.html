@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de articulos</title>
+</head>
+<body>
+    <h1>Compra de articulos</h1>
+
+    <script>
+        let precio,
+            cantidad;
+
+        precio = prompt("Ingrese el precio del producto");
+        cantidad = prompt("Ingrese la cantidad del producto");
+
+        let total = parseInt(precio)*parseInt(cantidad);
+
+        document.write(`El total a pagar es: <strong>${total}</strong>`);
+        
+    </script>
+</body>
+</html>
