@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparacion de numeros de hasta 3 cifras</title>
+</head>
+<body>
+    <script>
+        let num;
+
+        num = parseInt(prompt('Ingrese un numero:'));
+
+        if(num >= 0 & num <=9){
+            alert("El numero tiene 1 cifra");
+        }else{
+            if(num >=10 & num<= 99){
+                alert("El numero tiene 2 cifras");
+            }else{
+                if(num >=100 & num<=999){
+                    alert("El numero tiene 3 cifras");
+                }else{
+                    alert("Error");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
