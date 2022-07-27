@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Navidad</title>
+</head>
+<body>
+    <script>
+        // Realizar un programa que pida cargar una fecha cualquiera, luego verificar si dicha fecha corresponde a Navidad (se debe cargar por separado el dia, el mes y el año)
+        let dia,mes,anio;
+
+        dia = prompt('Dia');
+        mes = prompt('Mes');
+        anio = prompt('Anio');
+
+
+        if(dia == '25' && mes == '12'){
+            alert(`La fecha es ${dia}/${mes}/${anio},estamos en Navidad!!!`);
+        }else{
+            alert(`La fecha ${dia}/${mes}/${anio} no corresponde a la Navidad!!!`);
+        }
+
+    </script>
+</body>
+</html>
