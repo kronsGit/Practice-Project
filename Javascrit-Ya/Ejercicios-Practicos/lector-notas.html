@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de 10 notas de un Alumno</title>
+</head>
+<body>
+    <!-- Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores. -->
+
+    <script>
+        let nombre,conteo,nmayores,nmenores;
+    
+        nombre = prompt('Ingrese el nombre del alumno');
+        conteo = 1;
+        nmayores = 0;
+        nmenores = 0;
+    
+        while(conteo<=10){
+            let notas = parseInt(prompt('Ingrese sus 10 notas: '));
+            if (notas >= 7){
+                nmayores++;
+            }else{
+                nmenores++;
+            }
+            conteo++;
+         
+        }
+
+        document.write(`El alumno ${nombre} tiene ${nmayores} notas mayores y ${nmenores} notas menores`);
+
+
+
+    </script>
+</body>
+</html>
