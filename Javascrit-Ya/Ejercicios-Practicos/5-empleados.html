@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Empleados</title>
+</head>
+<body>
+    <!-- En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que lea los sueldos que cobra cada empleado e informe cuántos empleados cobran entre $100 y $300 y cuántos cobran más de $300. Además el programa deberá informar el importe que gasta la empresa en sueldos al personal. -->
+
+    <script>
+        let sueldos,conteo,menor100,mayor300,sumaS;
+        conteo=0;
+        menor100=0;
+        mayor300=0;
+        sumaS=0;
+        while(conteo<5){
+            sueldos=0;
+            sueldos = parseInt(prompt('Ingrese los salarios:'));
+            if(sueldos >=100 && sueldos <=300){
+                menor100++;
+            }else{
+                if(sueldos>300){
+                    mayor300++;
+                }
+            }
+            conteo++;
+            sumaS = sumaS+sueldos;
+        }
+        
+
+
+        document.write(`Sueldos menores a 100 y 300 son: ${menor100}`);
+        document.write('<br>');
+        document.write(`Sueldos mayores a 300 son: ${mayor300}`);
+        document.write('<br>');
+        document.write(`Total de Gastos operativos de la empresa: ${sumaS}`);
+        
+    </script>
+</body>
+</html>
