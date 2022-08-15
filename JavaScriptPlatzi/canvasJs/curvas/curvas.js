@@ -2,8 +2,17 @@ let d = document.getElementById("curvas");
 let lienzo = d.getContext("2d");
 let lineas = 30;
 let l = 0;
+let yi,xf;
 
+while(l < lineas){
+    yi = 10 * l;
+    xf = 10 * (l+1);
+    dibujarLinea("green",0,yi,xf,300);
+    console.log("Linea" +1);
 
+    l=l+2;
+
+}
 
 dibujarLinea("green",0,0,10,300);
 dibujarLinea("green",0,0,20,300);
