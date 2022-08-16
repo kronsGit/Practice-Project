@@ -10,7 +10,7 @@ while(l < lineas){
     dibujarLinea("green",0,yi,xf,300);
     console.log("Linea" +1);
 
-    l=l+2;
+    l=l+1;
 
 }
 
