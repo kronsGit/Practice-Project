@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma Do While</title>
+</head>
+<body>
+    
+    <!-- Realizar un programa que acumule (sume) valores ingresados por teclado hasta ingresa el 9999 (no sumar dicho valor, solamente indica que ha finalizado la carga). Imprimir el valor acumulado e informar si dicho valor es cero, mayor a cero o menor a cero. -->
+    <script>
+        let num,
+            sumaAcumulada = 0;
+
+        document.write(`Suma Acumulada`);
+        document.write(`<br>`);
+        document.write(`<br>`);
+
+        do{
+            num = parseInt(prompt('Ingrese cantidades a suma: ,para finalizar ingresar 9999'));
+            if (num != 999){
+                document.write(`+${num}`);
+                sumaAcumulada = sumaAcumulada + num;
+                document.write(`<hr>`);
+            }
+        }while(num !=999); //Hacer hasta que se ingrese el numero 999
+
+        document.write('<br>');
+        document.write('Valor acumulado total: ' + sumaAcumulada);
+        document.write('<br>');
+
+        if(sumaAcumulada > 0){
+            document.write('El valor es mayor a 0');
+        }else{
+            if(suma==0){
+                document.write('El es igual a 0');
+            }else{
+                document.write('El valor es menor a 0');
+            }
+        }
+    </script>
+</body>
+</html>

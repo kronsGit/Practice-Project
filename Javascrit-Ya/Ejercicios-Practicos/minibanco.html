@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Banco</title>
+</head>
+<body>
+
+    <!-- En un banco se procesan datos de las cuentas corrientes de sus clientes. De cada cuenta corriente se conoce: número de cuenta, nombre del cliente y saldo actual. El ingreso de datos debe finalizar al ingresar un valor negativo en el número de cuenta.
+Se pide confeccionar un programa que lea los datos de las cuentas corrientes e informe:
+a) De cada cuenta: número de cuenta, nombre del cliente y estado de la cuenta según su saldo, sabiendo que:
+Estado de la cuenta	'Acreedor' si el saldo es >0.
+			'Deudor' si el saldo es <0.
+			'Nulo' si el saldo es =0.
+b) La suma total de los saldos acreedores. -->
+
+
+<script>
+    let numCuenta,nombreCliente,SaldoAc;
+    let sumaT = 0;
+
+    do{
+        
+        numCuenta = parseInt(prompt('Ingrese su numero de cuenta: '));
+        if(numCuenta<0){
+            break;
+        }
+        nombreCliente = prompt('Nombre del cliente: ');
+        SaldoAc = parseInt(prompt('Ingrese su saldo actual: '));
+        
+        if(numCuenta>=0){
+            let Estado;
+            if(SaldoAc>0){
+                Estado = "Acreedor";
+            }else{
+                if(SaldoAc<0){
+                    Estado = "Deudor";
+                }else{
+                    if(SaldoAc === 0){
+                        Estado = "Nulo";
+                    }
+                }
+            }
+            
+            document.write("El numero de cuenta es: "+numCuenta);
+            document.write('<br>');
+            document.write("Nombre del cliente: "+nombreCliente);
+            document.write('<br>');
+            document.write("Saldo: "+SaldoAc);
+            document.write('<br>');
+            document.write("Estado de cuenta: "+Estado);
+            document.write('<br>');
+            document.write('<br>');
+            document.write('<br>');
+    
+            sumaT=sumaT+SaldoAc;
+        }
+       
+     
+        
+
+
+    }while(numCuenta>=0);
+    document.write('<br>');
+    document.write('<br>');
+    document.write("Suma total de todos los clientes: "+sumaT);
+    
+</script>
+    
+</body>
+</html>
