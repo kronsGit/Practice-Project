@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo JS</title>
+</head>
+<body>
+    <!-- Se realizó un censo provincial y se desea procesar la información obtenida en dicho censo. De cada una de las personas censadas se tiene la siguiente información: número de documento, edad y sexo ('femenino' o 'masculino')
+Se pide confeccionar un programa que lea los datos de cada persona censada (para finalizar ingresar el valor cero en el número de documento) e informar:
+ 
+a)	Cantidad total de personas censadas.
+b)	Cantidad de varones.
+c)	Cantidad de mujeres.
+d)	Cantidad de varones cuya edad varía entre 16 y 65 años. -->
+
+<script>
+    let nDoc,edad,sexo;
+    let cantCenso=0;
+    let canVarones=0;
+    let canMujeres=0;
+    let varoEdad=0;
+
+    do{
+      nDoc = parseInt(prompt('Ingresa tu numero de Documento: '));
+
+      if(nDoc!=0){
+          edad = parseInt(prompt('Ingresa tu edad: '));
+          sexo = prompt('Ingrese su sexo a:Masculino||b:femenino');
+          
+          cantCenso++
+
+          if(sexo=="a"){
+            canVarones++
+          }else{
+            if(sexo=="b"){
+                canMujeres++
+            }else{
+                alert("Error al ingresar sexo");
+            }
+          }
+
+          if(edad=16 && edad<=65 && sexo=="a"){
+            varoEdad++
+          }
+      }
+
+    }while(nDoc!=0);
+
+    document.write(`Cantidad total de personas censadas = ${cantCenso}`);
+    document.write(`<br>`);
+    document.write(`Cantidad de varones. = ${canVarones}`);
+    document.write(`<br>`);
+    document.write(`Cantidad de mujeres. = ${canMujeres}`);
+    document.write(`<br>`);
+    document.write(`Cantidad de varones entre 16 y 65 años = ${varoEdad}`);
+      document.write(`<br>`);
+
+</script>
+
+</body>
+</html>
