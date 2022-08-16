@@ -1,34 +1,31 @@
 let d = document.getElementById("curvas");
 let lienzo = d.getContext("2d");
-let lineas = 1000;
+let lineas = 150;
 let l = 0;
-let yi,xf;
+// let yi,xf;
+let xi,yf;
+
 
 while(l < lineas){
-    yi = 7 * l;
-    xf = 7 * (l+1);
-    dibujarLinea("green",0,yi,xf,1000);
+    // yi = 7 * l;
+    // xf = 7 * (l+1);
+    xi = 7*l;
+    yf = 7 * (l+1);
+    dibujarLinea("green",xi,0,999,yf);
     console.log("Linea" +1);
-
     l=l+1;
-
 }
 
-dibujarLinea("#000",1,1,1,999);
-dibujarLinea("#000",1,999,999,999);
+dibujarLinea("#000",1,1,999,1);
+dibujarLinea("#000",1,1,999,1);
+dibujarLinea("#000",1,1,999,1);
 
-// dibujarLinea("green",0,0,10,300);
-// dibujarLinea("green",0,0,20,300);
-// dibujarLinea("green",0,0,30,300);
-// dibujarLinea("green",0,0,40,300);
+dibujarLinea("#000",999,1,999,999);
+dibujarLinea("#000",999,1,999,999);
+dibujarLinea("#000",999,1,999,999);
 
 
-// lienzo.beginPath();
-// lienzo.strokeStyle = "red";
-// lienzo.moveTo(180,10);
-// lienzo.lineTo(290,200);
-// lienzo.stroke();
-// lienzo.closePath(); 
+
 
 function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal){
     lienzo.beginPath();

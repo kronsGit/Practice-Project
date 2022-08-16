@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Regulares</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aspernatur molestiae dolorem nostrum dolor nihil nesciunt ab eaque nisi totam iusto optio temporibus, harum repellat asperiores eum quis laborum veritatis.
+    <script>
+        // Se utiliza normalmente para validaciones
+
+        /*
+        Expresiones Regulares 
+        Son una secuencia de caracteres que forma un patron de busqueda principalmente utilizada para la busqueda de patrones de cadenas de caracteres.
+        */
+
+        let cadenas = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aspernatur molestiae dolorem nostrum dolor nihil nesciunt ab eaque nisi totam iusto optio temporibus, harum repellat asperiores eum quis laborum veritatis.";
+
+        // Formas para declarar una expresion Regular
+
+        let expReg = new RegExp("lorem","ig");
+        console.log(expReg.test(cadenas));
+        console.log(expReg.exec(cadenas));
+
+        let expReg2 = /lorem{1,}/ig;
+        console.log(expReg.test(cadenas));
+        console.log(expReg.exec(cadenas));
+
+
+    </script>
+</body>
+</html>
