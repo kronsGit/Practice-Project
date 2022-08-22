@@ -16,8 +16,24 @@
 
     for(let i=1;i<=3;i++){
         let base = parseInt(prompt('Ingrese su base: '));
-        let altura = parseInt(prompt(;'Ingrese su altura: '))
+        let altura = parseInt(prompt('Ingrese su altura: '));
+        let superficie = base * altura /2;
+
+        if(superficie >12){
+            conta1++;
+        }
+
+        document.write('Triangulo nro: '+i+'<br>');
+        document.write('Base: '+base+'<br>');
+        document.write('Altura: '+altura+'<br>');
+        document.write('Superficie: '+superficie+'<br>');
+        document.write('<br>');
+        document.write('<br>');
+
+
     }
+
+    document.write('La cantidad de triangulos mayor a 12 es: '+conta1);
 
 
 
