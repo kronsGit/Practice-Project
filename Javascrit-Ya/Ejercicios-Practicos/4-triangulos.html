@@ -19,6 +19,7 @@
     let triangulo,lado1,lado2,lado3
         numTri=1;
     let tipoTriangulo="";
+    let menorCantidad="";
     
 
     for(i=1;i<=4;i++){
@@ -38,7 +39,9 @@
             escaleno++;
         }
 
-        
+       
+
+
     
         document.write(`Triangulo #${numTri}`);
         document.write(`<br>`);
@@ -56,11 +59,26 @@
         document.write(`<br>`);
         document.write(`<br>`);
     }
+
+    if(equilatero < isosceles && equilatero < escaleno){
+       menorCantidad="Equilatero";    
+    }else{
+        if(isosceles < equilatero && isosceles < escaleno){
+            menorCantidad="Isosceles";  
+        }else{
+            if(escaleno < equilatero && escaleno < isosceles){
+                menorCantidad="Escaleno";
+            }
+           
+        }
+    }
     document.write(`Triangulos Equilateros <strog>${equilatero}</strog>`);
     document.write(`<br>`);
     document.write(`Triangulos Isosceles <strog>${isosceles}</strog>`);
     document.write(`<br>`);
     document.write(`Triangulos Escaleno <strog>${escaleno}</strog>`);
+    document.write(`<br>`);
+    document.write(`Triangulos de menor cantidad: <strog>${menorCantidad}</strog>`);
     document.write(`<br>`);
 
 
