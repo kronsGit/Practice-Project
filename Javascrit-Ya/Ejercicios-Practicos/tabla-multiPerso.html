@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de mutiplicar</title>
+</head>
+<body>
+    <script>
+    //         Confeccionar un programa que permita ingresar un valor del 1 al 10 y nos muestre la tabla de multiplicar del mismo (los primeros 12 términos)
+    // Ejemplo: Si ingreso 3 deberá aparecer en pantalla los valores 3, 6, 9, hasta el 36.
+    
+    let f;
+    let num=1;
+    f = parseInt(prompt(`Tabla de multiplicar a mostrar del 1-12`));
+    document.write(`Tabla de multiplicar ${f}`);
+    document.write('<br>');
+    document.write('<br>');
+   
+    
+            for(i=1;i<=12;i++){
+                multi=num*f;
+                document.write(`${num}x${f} = ${multi}`);
+                document.write('<br>');
+                num++;
+            }
+
+            document.write('<br>');
+            document.write('<br>');
+     
+    </script>
+</body>
+</html>
