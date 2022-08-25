@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio registro de Notas</title>
+</head>
+<body>
+    <script>
+        // Se cuenta con la siguiente información:
+        // Las edades de 5 estudiantes del turno mañana.
+        // Las edades de 6 estudiantes del turno tarde.
+        // Las edades de 11 estudiantes del turno noche.
+        // Las edades de cada estudiante deben ingresarse por teclado.
+        // a) Obtener el promedio de las edades de cada turno (tres promedios).
+        // b) Imprimir dichos promedios (promedio de cada turno).
+        // c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene un promedio de edades mayor.
+
+        // Turno ma;ana
+        
+        let sumaM=0;
+        for(let i=1;i<=5;i++){
+            let edad=parseInt(prompt("Edades de Estudiantes turno Mañana:"));
+            sumaM=sumaM+edad;
+        }
+        // Turno tarde
+        let sumaT=0;
+        for(let i=1;i<=6;i++){
+            let edad=parseInt(prompt("Edades de Estudiantes turno de Tarde:"));
+            sumaT=sumaT+edad;
+        }
+        // Turno noche
+        let sumaN=0;
+        for(let i=1;i<=11;i++){
+            let edad=parseInt(prompt("Edades de Estudiantes turno de Noche:"));
+            sumaN=sumaN+edad;
+        }
+
+        // Promedios
+        let promedioM = sumaM/5;
+        let promedioT = sumaT/6;
+        let promedioN = sumaN/11;
+
+        document.write("Promedios de Edades del Colegio"+"<br>");
+        document.write("<br>");
+        document.write(`Promedio de edades Ma;ana: ${promedioM}<br>`);
+        document.write(`Promedio de edades Tarde: ${promedioT}<br>`);
+        document.write(`Promedio de edades Noche: ${promedioN}<br>`);
+       
+        if(promedioM > promedioT && promedioM > promedioT){
+            document.write("El turno de la Ma;ana tiene un promedio de edades mayor");
+        }else{
+            if(promedioT > promedioM && promedioT > promedioN){
+            document.write("El turno de la Tarde tiene un promedio de edades mayor");
+            }
+            else{
+            document.write("El turno de la Noche tiene un promedio de edades mayor");
+
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
