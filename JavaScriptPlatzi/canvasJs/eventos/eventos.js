@@ -1,25 +1,14 @@
 let texto = document.getElementById("texto_lineas");
 let boton = document.getElementById("botoncito");
-boton.addEventListener();
+boton.addEventListener("click", dibujoPorClick);
 
 let d = document.getElementById("curvas");
+let ancho = d.width;
 let lienzo = d.getContext("2d");
-let lineas = 1000;
-let l = 0;
-let yi,xf;
 
-while(l < lineas){
-    yi = 7 * l;
-    xf = 7 * (l+1);
-    dibujarLinea("green",0,yi,xf,1000);
-    console.log("Linea" +1);
 
-    l=l+1;
-
-}
-
-dibujarLinea("#000",1,1,1,999);
-dibujarLinea("#000",1,999,999,999);
+dibujarLinea("#000",1,1,1,499);
+dibujarLinea("#000",1,499,499,499);
 
 // dibujarLinea("green",0,0,10,300);
 // dibujarLinea("green",0,0,20,300);
@@ -41,4 +30,25 @@ function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal){
     lienzo.lineTo(xfinal,yfinal);
     lienzo.stroke();
     lienzo.closePath();
+}
+
+
+function dibujoPorClick(){
+    let optenText = parseInt(texto.value);
+    let lineas = optenText;
+    let l = 0;
+    let yi,xf;
+    let space = ancho/lineas; //Ecuacion para pintar las lineas que quiera el cliente
+
+
+    while(l < lineas){
+        yi = space * l;
+        xf = space * (l+1);
+        dibujarLinea("green",0,yi,xf,500);
+        console.log("Linea" +1);
+
+        l=l+1;
+
+    }
+
 }
