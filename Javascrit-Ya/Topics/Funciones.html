@@ -51,18 +51,50 @@
         */
 
         // Forma tradicional
-        document.write("Cuidado<br>");
-        document.write("Ingrese su documento correctamente<br>");
-        document.write("Cuidado<br>");
-        document.write("Ingrese su documento correctamente<br>");
-        document.write("Cuidado<br>");
-        document.write("Ingrese su documento correctamente<br>");
+        // document.write("Cuidado<br>");
+        // document.write("Ingrese su documento correctamente<br>");
+        // document.write("Cuidado<br>");
+        // document.write("Ingrese su documento correctamente<br>");
+        // document.write("Cuidado<br>");
+        // document.write("Ingrese su documento correctamente<br>");
 
         //Utilizando una Funcion
         function mostrarMensaje(){
             document.write("Cuidado<br>");
             document.write("Ingrese su documento correctamente<br>");
         }
+
+        // mostrarMensaje();
+        // mostrarMensaje();
+        // mostrarMensaje();
+
+
+        //Es importante notar que para que una funcion se ejecute debemos llamarla desde afuera por su nombre (en este ejemplo: mostrarMensaje()).
+        /*
+        Si no se llama a la funcion esta nunca se ejecuta 
+
+        Las funciones las podemos llamas las veces que necesitemos, las funciones nos ahorran escribir codigo que se repite con frecuencia y permite que nuestro programa sea mas entendible
+        */
+
+        /*
+        Problema: Confeccionar una función que solicite el ingreso de un entero y nos muestre la tabla de multiplicar de dicho valor. Llamar luego una vez a la función.
+        */
+       
+       function tablaMultiplicacion(){
+            let tabla=0;
+            let multi=0;
+            tabla = parseInt(prompt("Tabla de multiplicar a mostrar"));
+            document.write("<strong>Tabla del "+ tabla+"</strong><br>");
+            document.write("<br>");
+
+            for(i=1;i<=12;i++){
+                multi=tabla*i;
+                document.write(`${tabla}x${i}=${multi}<br>`);
+            }
+        }
+
+        tablaMultiplicacion();
+    
 
     </script>
 </body>
