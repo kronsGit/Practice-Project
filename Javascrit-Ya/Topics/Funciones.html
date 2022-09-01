@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JavaScript</title>
+</head>
+<body>
+    <script>
+        /*
+        En un programa es muy frecuente que un procedimiento de calculo definido por un grupo de sentencias se repita varias veces, ya sea en el mismo programa o en otros programas
+        lo cual implica escribir muchas veces dicho proceso.
+
+        La herramienta mas potente con que se cuenta para facilitar,reducir y dividir el trabajo de programacion son las funciones.
+
+        Un programa es algo complejo de realizar por ello necesita que este bien estructurado y tambien que sea intelegible para las personas.
+
+        Con las funciones podemos segmentar un programa en varias partes.
+
+        Una funcion es un conjuntos de instrucciones que resuelven una parte del problema y que puede ser utilizado(llamado) desde diferentes partes del programa
+
+        Consta de nombre y parametros
+        Con el nombre llamamos a la funcion, es decir hacemos referencia a la misma
+        Los parametros son los valores que se envian y son indispensables para la resolucion del mismo.
+        La funcion realizara alguna operacion con los parametros que le enviemos. Podemos cargar una variable, consultarla, modificarla, imprimirla, etc.
+
+        Las funciones son los unicos 
+
+        Sintaxis
+
+        function<nombre de la funcion>(argumento 1,argumnento 2,argunmento 3,......argumento n){
+            <codigo de la funcion>
+        }
+
+        Ejemplo:
+
+        Debemos buscar un nombre de función que nos indique cuál es su objetivo (Si la función recibe un string y lo centra, tal vez deberíamos llamarla centrarTitulo). Veremos que una función puede variar bastante en su estructura, puede tener o no parámetros, retornar un valor, etc.
+
+        Ejemplo: Mostrar un mensaje que se repita 3 veces en la página con el siguiente texto:
+
+        'Cuidado'
+        'Ingrese su documento correctamente'
+
+        'Cuidado'
+        'Ingrese su documento correctamente'
+
+        'Cuidado'
+        'Ingrese su documento correctamente'
+        La solución sin emplear funciones es:
+        */
+
+        // Forma tradicional
+        document.write("Cuidado<br>");
+        document.write("Ingrese su documento correctamente<br>");
+        document.write("Cuidado<br>");
+        document.write("Ingrese su documento correctamente<br>");
+        document.write("Cuidado<br>");
+        document.write("Ingrese su documento correctamente<br>");
+
+        //Utilizando una Funcion
+        function mostrarMensaje(){
+            document.write("Cuidado<br>");
+            document.write("Ingrese su documento correctamente<br>");
+        }
+
+    </script>
+</body>
+</html>
