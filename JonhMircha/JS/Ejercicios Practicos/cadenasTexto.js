@@ -77,23 +77,22 @@ function cortarPalabras(){
 /******Funcion Expresada****/
 
 const recortarTexto = (cadena = "",longitud=undefined)=>
-        (!cadena)
+        (!cadena)                           //Operador Ternario
         ? console.warn("No ingresaste una cadena")
-        : console.info(cadena.slice(0,longitud));
+        :(longitud === undefined)           //Operador Ternario
+            ?console.warn("No ingresaste la longitud para recortar el texto")
+            : console.info(cadena.slice(0,longitud));
 
         recortarTexto();
         recortarTexto("Navidad dulce Navida",7);
-
-
-
-
-
-
-
-
+        recortarTexto("Navidad dulce Navida");
 
 
 // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+
+
+
 // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo. 
 
 
