@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones con Parametros </title>
+</head>
+<body>
+    
+    <h1>Funciones con Parametros</h1>
+
+    <script>
+        /*
+        Ejemplo: Confeccionar una función que reciba dos números y muestre en la página los valores comprendidos entre ellos de uno en uno. Cargar por teclado esos dos valores.
+        */
+
+        function mostrarComprendidos(inicio, fin) {
+            for (let f = inicio; f <= fin; f++) {
+                document.write(f + ' ');
+            }
+        }
+
+        let valor1 = parseInt(prompt('Ingrese valor inferior:'));
+        let valor2 = parseInt(prompt('Ingrese valor superior:'));
+        mostrarComprendidos(valor1, valor2);
+
+        /*
+        El programa empieza a ejecutarse donde empieza  mostrarComprendidos(valor1, valor2), no donde se define la funcion 
+
+        Luego de cargar los dos valores por teclado se llama la funcion mostrarComprendidos y le enviamos las variables a valor 1 y valor 2, los parametros inicio y fin reciben los 
+        contenidos de las varariables valor 1 y valor 2.
+
+        Es importante notar que a la funcion la podemos llamar la cantidad de veces que necesitemos. Los nombres de los parametros, en este caso se llaman inicio y fin, no necesariamente se deben llamar igual que las variables que le pasamos cuando la llamamos a la funcion, en este caso valor 1 y valor 2
+        */
+
+    </script>
+</body>
+</html>
