@@ -11,7 +11,24 @@
 
     <script>
         // Elaborar una función a la cual le enviemos tres enteros y muestre el menor.
-        function comparacionNumeros(num1,num2,num3){
+
+        // Funcion Declarada
+        // function comparacionNumeros(num1,num2,num3){
+        //     if(num1<num2 && num1<num3){
+        //         document.write(`El numero 1 es menor: <strong>${num1}</strong>`);
+        //     }else{
+        //         if(num2<num3){
+        //             document.write(`El numero 2 es menor: <strong>${num2}</strong>`);
+        //         }else{
+        //             document.write(`El numero 3 es menor: <strong>${num3}</strong>`);
+        //         }
+        //     }
+        // }
+
+
+        //Funcion Expresada 
+
+        const comparacionNumerosExpress = (num1,num2,num3)=>{
             if(num1<num2 && num1<num3){
                 document.write(`El numero 1 es menor: <strong>${num1}</strong>`);
             }else{
@@ -29,7 +46,7 @@
         valor2=parseInt(prompt("Ingrese el segundo valor: "));
         valor3=parseInt(prompt("Ingrese el tercer valor: "));
 
-        comparacionNumeros(valor1,valor2,valor3);
+        comparacionNumerosExpress(valor1,valor2,valor3);
 
     </script>
 </body>
