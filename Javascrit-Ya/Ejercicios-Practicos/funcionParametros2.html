@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion con Parametros 2</title>
+</head>
+<body>
+    <h1>Funcion con Parametros</h1>
+
+    <script>
+         //Confeccionar una función a la cual le envíe tres enteros y 
+        //los muestre ordenados de menor a mayor.
+
+        function mostrarOrdenados(x1,x2,x3){
+                if(x1<x2&&x1<x3){
+                    document.write(x1+' ');
+                    if(x2<x3){
+                    document.write(x2+ ' '+x3);
+                    }else{
+                        document.write(x3+' '+x2);
+                    }
+                }else{
+                    if(x2<x3){
+                    document.write(x2+' ');
+                    if(x1<x3){
+                    document.write(x1+ ' '+x3);
+                    }else{
+                        document.write(x3+' '+x1);
+                    }
+                }else{
+                    document.write(x3+' ');
+                    if(x1<x2){
+                        document.write(x1+' '+x2);
+                    }else{
+                        document.write(x2+' '+x1);
+
+                    }
+                }
+            }
+        }
+
+        let valor1,valor2,valor3;
+        valor1=parseInt(prompt("Ingrese el primer valor: "));
+        valor2=parseInt(prompt("Ingrese el segundo valor: "));
+        valor3=parseInt(prompt("Ingrese el tercer valor: "));
+
+        mostrarOrdenados(valor1,valor2,valor3);
+
+    </script>
+</body>
+</html>
