@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones que Retornan un valor</title>
+</head>
+<body>
+    <h1>Funciones que Retornen en un valor</h1>
+
+    <script>
+        // Ejemplo 1: Confeccionar una función que reciba un valor entero comprendido entre 1 y 5. Luego retornar en castellano el valor recibido.
+        
+        function convertirCastellano(x){
+            switch(x){
+                case 1:
+                    return("Uno");
+                break;
+                case 2:
+                    return("Dos");
+                break;
+                case 3:
+                    return("Tres");
+                break;
+                case 4:
+                    return("Cuatro");
+                break;
+                case 5:
+                    return("Cinco");
+                break;
+                default:
+                    return("Numero incorrecto");
+            }
+        }
+        // Cuando se llama a la función, debemos asignar el nombre de la función a una variable, ya que la misma retorna un valor.
+        
+        let numero = parseInt(prompt("Digita un numero"));
+        let r = convertirCastellano(numero);
+        document.write(numero);
+
+
+    </script>
+</body>
+</html>
