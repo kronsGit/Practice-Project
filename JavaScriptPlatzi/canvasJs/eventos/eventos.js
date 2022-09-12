@@ -7,7 +7,7 @@ let ancho = d.width;
 let lienzo = d.getContext("2d");
 
 
-dibujarLinea("#000",1,1,1,499);
+dibujarLinea("#000",1,1,1,499);F
 dibujarLinea("#000",1,499,499,499);
 
 // dibujarLinea("green",0,0,10,300);

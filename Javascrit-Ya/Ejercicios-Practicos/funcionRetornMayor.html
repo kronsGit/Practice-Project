@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion para retornar el numero Mayor</title>
+</head>
+<body>
+    <!-- Confeccionar una función a la cual le envíe tres enteros y retorne el mayor de ellos. -->
+    <script>
+        function mayorNum(a,b,c){
+            if(a > b && a > c){
+                return (`El mayor es <strong>${a}</strong>`);
+                
+            }else{
+                if(b > c){
+                return (`El mayor es <strong>${b}</strong>`);
+                
+                }else{
+                return (`El mayor es <strong>${c}</strong>`);
+                
+                }
+            }
+        }
+
+        let num1,num2,num3;
+        num1 = parseInt(prompt(`Ingrese el primer numero:`));
+        num2 = parseInt(prompt(`Ingrese el primer numero:`));
+        num3 = parseInt(prompt(`Ingrese el primer numero:`));
+
+        let r = mayorNum(num1,num2,num3);
+        document.write(r);
+        console.log(r);
+
+
+    </script>
+</body>
+</html>
