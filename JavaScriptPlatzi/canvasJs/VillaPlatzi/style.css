@@ -1,0 +1,9 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+canvas{
+    border: 3px solid black;
+    margin: auto;
+}

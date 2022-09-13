@@ -77,7 +77,7 @@ function dibujar(){
         papel.drawImage(fondo.imagen,0,0);
     }
     if(vaca.cargaOk){
-        for(let v=0;v<5;v++){
+        for(let v=0;v<2;v++){
             let x = aleatorio(0,420);
             let y = aleatorio(0,420);
             papel.drawImage(vaca.imagen,x,y);
@@ -85,7 +85,7 @@ function dibujar(){
     }
 
     if(cerdo.cargaOk){
-        for(let c=0;c<10;c++){
+        for(let c=0;c<5;c++){
             let xc = aleatorio(0,480);
             let yc = aleatorio(0,480);
             papel.drawImage(cerdo.imagen,xc,yc);
@@ -93,7 +93,7 @@ function dibujar(){
     }
 
     if(pollo.cargaOk){
-        for(let p=0;p<20;p++){
+        for(let p=0;p<5;p++){
             let xp = aleatorio(0,400);
             let yp = aleatorio(0,400);
             papel.drawImage(pollo.imagen,xp,yp);
