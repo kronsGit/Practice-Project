@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion retornar digitos</title>
+</head>
+<body>
+    <!-- Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera positiva de hasta 5 dígitos. -->
+    <script>
+        function digitos(x){
+           
+            if(x<10){
+                return ("<strong>un</strong>");
+            }else{
+                if(x<100){
+                    return ("<strong>dos</strong>");
+                }else{
+                    if(x<1000){
+                        return ("<strong>tres</strong>");
+                    }else{
+                        if(x<10000){
+                            return ("<strong>cuatro</strong>");
+                        }else{
+                            if(x<100000){
+                                return ("<strong>cinco</strong>");
+                            }
+                        }
+                    }
+                }
+
+            }
+
+           
+            
+        }
+
+        let num;
+        num = parseInt(prompt("Ingrese un numero: "));
+
+        let respuesta = digitos(num);
+        document.write(`El numero tiene ${respuesta} digitos`);
+        console.log(respuesta);
+
+    </script>
+    
+</body>
+</html>
