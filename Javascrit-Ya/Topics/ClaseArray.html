@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Array</title>
+</head>
+<body>
+    <script>
+        /*
+        Un vector es una estructura de datos que permite almacenar un conjunto de datos.Con un unico nombre se define el vector y por medio de un subindice hacemos referencia a cada elemento del mismo.
+        */
+
+        /* Ejemplo 1: Crear un vector para almacenar los cinco sueldos de operarios y luego mostrar el total de gastos en sueldos (cada actividad en una función)*/
+
+        //Esta funcion se utiliza para llenar el Array
+        function cargar(sueldos){
+            for(let f=0;f<sueldos.length;f++){
+                let v = prompt("Ingrese un sueldo: ");
+                sueldos[f]= parseInt(v);
+            }
+        }
+
+        //Esta funcion se usa para sumar y listar los sueldos
+        function calcularGastos(sueldos){
+            let total=0;
+            for(let f=0;f<sueldos.length;f++){
+                total = total+sueldos[f];
+            }
+            document.write('Listado de sueldos <br>');
+            for(let f=0;f < sueldos.length;f++){
+                document.write(`${sueldos[f]} <br>`);
+            }
+            document.write('Total de gastos en sueldos: '+total);
+        }
+
+        //Program
+
+        let salarios;
+        salarios = new Array(5);
+        cargar(salarios);
+        calcularGastos(salarios);
+
+        /*
+            -Primero definimos una varaible
+            -Creamos un objeto  de la clase Array, indicandole que deseamos almacenar 5 valores.
+            -Luego llamamos a la funcion cargar() enviandole el vector.En la funcion, a traves del ciclo for recorremos las distintas posiciones y almacenamos valores enteros que ingresamos por teclado
+            -Para conocer el tama;o del array accedemos a la propiedad length de la clase Array.
+            -Cuando en la funcion 'cargar'ingresamos los elementos del arreglo, sucede que se modifica la variable 'sueldos' definida en la parte interior.
+            -En la segunda funcion sumamos todos los componentes del vector,imprimos los valores en la pagina y el total de gastos.
+        */
+
+
+
+    </script>
+</body>
+</html>
