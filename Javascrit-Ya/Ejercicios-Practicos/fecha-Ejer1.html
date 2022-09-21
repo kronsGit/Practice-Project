@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Clase Date 1 </title>
+</head>
+<body>
+    <script>
+        // Confeccionar un programa que muestre en que cuatrimestre del año nos encontramos. Para esto obtener el mes.
+
+        //0 1 2 3   4 5 6 7  8 9 10 11
+
+        function cuatrimestre(){
+            
+            let mes;
+            mes = new Date();
+            console.log(mes.getMonth());
+
+            if(mes.getMonth()<4){
+                document.write(`Estamos en el mes ${mes.getMonth()} que pertenece al primer cuatrimestre del anio`);
+            }else{
+                if(mes.getMonth()<8){
+                document.write(`Estamos en el mes ${mes.getMonth()} que pertenece al segundo cuatrimestre del anio`);
+                }else{
+                document.write(`Estamos en el mes ${mes.getMonth()} que pertenece al tercer cuatrimestre del anio`);
+                }
+            }
+        }
+
+        cuatrimestre();
+    </script>
+</body>
+</html>
