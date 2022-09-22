@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vectores</title>
+</head>
+<body>
+    <script>
+       /* Desarrollar un programa que permita ingresar un vector de 8 elementos, e informe:
+        El valor acumulado de todos los elementos del vector.
+        El valor acumulado de los elementos del vector que sean mayores a 36.
+        Cantidad de valores mayores a 50.*/
+
+        function cargaVectores(numeros){
+            for(let i=0;i<numeros.length;i++){
+                let vec = prompt("Ingrese un numero: ");
+                numeros[i] = parseInt(vec);
+            }
+        }
+
+
+        function sumaVectores(numeros){
+            let total=0;
+            for(let i=0;i<numeros.length;i++){
+                total=total+numeros[i];
+            }
+            document.write(`El total de los vectores: <strong>${total}</strong> <br>`);
+            console.log(total);
+
+        }
+
+        function sumaVectores36(numeros){
+            let total36=0;
+            for(let i=0;i<numeros.length;i++){
+                if(numeros[i]>36){
+                    total36=total36+numeros[i];
+                }
+            }
+            document.write(`El total de vectores mayores a 36: <strong>${total36}</strong> <br>`);
+            console.log(total36);
+
+
+        }
+
+        function cantVectores50(numeros){
+            let cant=0;
+            for(let i=0;i<numeros.length;i++){
+                if(numeros[i]>50){
+                    cant++;
+                }
+            }
+
+            document.write(`El total de vectores mayores a 50: <strong>${cant}</strong> <br>`);
+            console.log(cant);
+
+        }
+
+        //Ejecucion del programa
+
+       
+        let nums = new Array(8);
+        cargaVectores(nums);
+        sumaVectores(nums);
+        sumaVectores36(nums);
+        cantVectores50(nums);
+
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>
