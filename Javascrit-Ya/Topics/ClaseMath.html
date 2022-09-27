@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Math</title>
+</head>
+<body>
+    <script>
+        /*
+        Esta clase es un contenedor que tiene diversas constantes (Como Math.E y Math.PI) y un conjunto de metodos matematicos.
+
+        Método	                Descripción	Expresión de ejemplo	                                                Resultado
+        abs	                    Valor absoluto	                                                                    Math.abs(-2)	2
+        sin, cos, tan	        Funciones trigonométricas, reciben el argumento en radianes	                        Math.cos(Math.PI)	-1
+        asin, acos, atan	    Funciones trigonométricas inversas	                                                Math.asin(1)	1.57
+        exp, log	            Exponenciación y logaritmo, base E	                                                Math.log(Math.E)	1
+        ceil	                Devuelve el entero más pequeño mayor o igual al argumento	                        Math.ceil(-2.7)	-2
+        floor	                Devuelve el entero más grande menor o igual al argumento	                        Math.floor(-2.7)	-3
+        round	                Devuelve el entero más cercano o igual al argumento	                                Math.round(-2.7)	-3
+        min, max	            Devuelve el menor (o mayor) de sus dos argumentos	                                Math.min(2,4)	2
+        pow	                    Exponenciación, siendo el primer argumento la base y el segundo el exponente	    Math.pow(2,3)	8
+        sqrt	                Raíz cuadrada	                                                                    Math.sqrt(25)	5
+        random	                Genera un valor aleatorio comprendido entre 0 y 1.	                                Math.random()	Math.random()
+
+        */
+
+
+        /*
+        Ejemplo: Confeccionar un programa que permita cargar un valor comprendido entre 1 y 10. Luego generar un valor aleatorio entre 1 y 10, mostrar un mensaje con el número sorteado e indicar si ganó o perdió:
+        */
+        let selec = parseInt(prompt("Ingrese un valor entre 1 y 10"));
+        let num = parseInt(Math.random()*10)+1;
+
+        if(num === selec){
+            document.write('Ganó el número que se sorteó es el ' + num);
+        }else
+            document.write('Lo siento se sorteó el valor ' + num + ' y usted eligió el ' + selec);
+
+        /*
+        Para generar un valor aleatorio comprendido entre 1 y 10 debemos plantear lo siguiente:
+
+        let num = parseInt(Math.random() * 10) + 1;
+        Al multiplicar Math.random() por 10, nos genera un valor aleatorio comprendido entre un valor mayor a 0 y menor a 10, luego, con la función parseInt, obtenemos sólo la parte entera. Finalmente sumamos uno.
+
+        El valor que cargó el operador se encuentra en:
+
+                let selec = parseInt(prompt('Ingrese un valor entre 1 y 10'));
+        Con un simple if validamos si coinciden los valores (el generado y el ingresado por teclado)
+        */
+    </script>
+</body>
+</html>
