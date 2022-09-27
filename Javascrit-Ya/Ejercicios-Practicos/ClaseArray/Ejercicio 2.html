@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de Vectores</title>
+</head>
+<body>
+    <script>
+        /*Realizar un programa que pida la carga de dos vectores numéricos. Obtener la suma de los dos vectores, dicho resultado guardarlo en un tercer vector del mismo tamaño. Sumar componente a componente.
+        El tamaño del vector es a elección.*/
+
+        function cargaVectores(nums1,nums2){
+            let suma=0;
+            for(let i=0;i<nums1.length;i++){
+                let v=prompt("Ingrese un numero: ");
+                nums1[i]= parent(v);
+            }
+
+            for(let f=0;f<nums2.length;f++){
+                let v2=prompt("Ingrese un numero: ");
+                nums2[i]= parent(v2);
+            }            
+        }
+
+        function sumarVectores(nums1,nums2,numsSuma){
+            for(let i=0;i<numsSuma.length;i++){
+                numsSuma[i]=nums1[i]+nums2[i];
+            }
+        }
+
+        function imprimirVector(numsSuma){
+            for (let i = 0; i < numsSuma.length; i++) {
+                document.write(numsSuma[i] + ' ');
+            }
+        }
+
+        let num1 = new Array(5);
+        let num2 = new Array(5);
+        let numSuma = new Array(5);
+
+        cargaVectores(num1,num2);
+        
+
+
+
+        cargaVectores(n1,n2);
+    </script> 
+</body>
+</html>
