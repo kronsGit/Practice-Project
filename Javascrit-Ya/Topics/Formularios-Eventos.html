@@ -7,6 +7,11 @@
     <title>Formularios y Eventos</title>
 </head>
 <body>
+    <form action="">
+        <input type="button" onClick="incrementar()" value="incrementar">
+    </form>
+
+
     <script>
         /*
         El uso de Javascript en los formularios HTML se hace fundamentalmente con el objetivo de validar los datos ingresados. Se hace esta actividad en el cliente (navegador) para desligar de esta actividad al servidor que recibirá los datos ingresados por el usuario.
@@ -27,8 +32,26 @@
         select <select> ... </select>
         hidden <input type="hidden">
         El navegador crea un objeto por cada control visual que aparece dentro de la página. Nosotros podemos acceder posteriormente desde JavaScript a dichos objetos.
-        
+
+
+        El navegador crea un objeto por cada control visual que aparece dentro de la página. Nosotros podemos acceder posteriormente desde JavaScript a dichos objetos.
+
+        El objeto principal es el FORM que contendrá todos los otros objetos: TEXT (editor de líneas), TEXTAREA (editor de varias líneas), etc.
+
+        Nuestra actividad en JavaScript es procesar los eventos que generan estos controles (un evento es una acción que se dispara, por ejemplo si se presiona un botón).
         */
+
+
+        /*Vamos a hacer un problema muy sencillo empleando el lenguaje Javascript; dispondremos un botón y cada vez que se presione, mostraremos un contador:*/
+
+        let contador = 0;
+
+        function incrementar(){
+            contador++;
+            alert(`El contador ahora vale: ${contador}`);
+        }
+
+
     </script>
 </body>
 </html>
