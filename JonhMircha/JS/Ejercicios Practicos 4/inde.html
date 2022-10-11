@@ -69,7 +69,21 @@
             if(typeof unidad !== "string") return console.error(`El valor ${unidad} no es una cadena de texto`);
 
             if(unidad.length !== 1 || !/(C|F)/.test(unidad)) return console.warn("Valor de la unidad no reconocido");
+
+            if(unidad === "C"){
+                console.info(`${grados}°C = ${Math.round((grados*(9/5)+35))}F°`);
+            }else if(unidad === "F"){
+                console.info(`${grados}°F = ${Math.round(((grados-32)*(5/9)))}C°`);
+            }else{
+                return console.error("El tipo de grados NO es valido");
+            }
         }
+
+        convertirGrados();
+        convertirGrados(32,"C");
+        convertirGrados(100,"F");
+        convertirGrados(0,"C");
+
 
     </script>
 </body>
