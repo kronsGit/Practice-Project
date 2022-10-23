@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles FORM, BUTTON y TEXT.</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Ingrese su nombre:</label>
+        <input type="text" id="name">
+        <br>
+        
+        <label for="age">Ingrese su edad:   </label>
+        <input type="text" id="age">
+        <br>
+        <br>
+        <input type="button" value="Confirmar" onclick="mostrar()">
+        <br>
+    </form>
+    <script>
+       /* 
+          Hasta ahora hemos visto como crear un formulario con controles de tipo BUTTON. Agregamos un control de tipo TEXT (permite al operador cargar caracteres por teclado).
+          Veremos la importancia de definir un id a todo control de un formulario.
+
+          Con un ejemplo veremos estos controles: Confeccionar un formulario que permita ingresar el nombre y edad de una persona:
+       */
+
+       function mostrar(){
+        let nom = document.getElementById('name').value;
+        let age = document.getElementById('age').value;
+        alert('Se ingreso el nombre: '+nom);
+        alert('Edad: '+age);
+
+
+       }
+
+       /*
+       En este problema tenemos cuatro controles: 1 FORM, 1 BUTTON, 2 TEXT. El evento que se dispara al presionar el botón se llama mostrar.
+
+        La función 'mostrar' accede a los contenidos de los dos controles de tipo TEXT:
+
+                    let nom = document.getElementById('nombre').value;
+                    let ed = document.getElementById('edad').value;
+        Para hacer más clara la función guardamos en dos variables auxiliares los contenidos de los controles de tipo TEXT.
+
+        La propiedad "id" es un identificador único para cualquier elemento HTML que luego nos permite desde Javascript acceder a dicho elemento.
+
+        El método getElementById nos retorna una referencia del objeto HTML que le pasamos como parámetro, a partir de este objeto accedemos a la propiedad value que almacena el valor ingresado por el operador en el control TEXT.
+
+        Luego de extraer los valores ingresados por el operador los mostramos utilizando la función alert:
+
+                    let nom = document.getElementById('nombre').value;
+                    let ed = document.getElementById('edad').value;
+                    alert('Ingresó el nombre:' + nom);
+                    alert('Y la edad:' + ed);
+
+                    
+       */
+
+
+    </script>
+</body>
+</html>
