@@ -17,6 +17,7 @@ class Pakiman{
     show(){
         //Div contenedor principal
         let divmain = document.createElement('div');
+        divmain.setAttribute("class","cardMain");//Agregar una clase 
         //H1 con titulo con el nombre del clan
         let cabecera = document.createElement('h2');
         cabecera.innerHTML = this.nombre + '<br> Stats';
