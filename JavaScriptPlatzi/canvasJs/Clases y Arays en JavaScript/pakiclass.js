@@ -1,3 +1,7 @@
+
+
+
+
 // Creando clase
 class Pakiman{
     //Constructor
@@ -15,31 +19,35 @@ class Pakiman{
     }
 
     show(){
+
+       
         //Div contenedor principal
         let divmain = document.createElement('div');
-        divmain.setAttribute("class","cardMain");//Agregar una clase 
+        divmain.setAttribute("class",`cardMain`);//Agregar una clase 
         //H1 con titulo con el nombre del clan
         let cabecera = document.createElement('h2');
-        cabecera.innerHTML = this.nombre + '<br> Stats';
+        cabecera.innerHTML = this.nombre;
         cabecera.setAttribute("class","card");//Agregando una clase a "cabecera"
         let saltoLinea = document.createElement('br');
 
         let divchild = document.createElement('div');//Agregando pets-detail
         divchild.setAttribute("class","childCard");//Agregando una clase a divChild
-        
+        let spanStats = document.createElement('span');
+        spanStats.innerHTML = 'Stats';
         let pVida = document.createElement('p');//Creando el elemento p de la Vida
         pVida.innerHTML = 'Vida: '+this.vida + '<br>';
         let pAtaque = document.createElement('p');//Creando el elemento p del ataque
         pAtaque.innerHTML ='Ataque: '+this.ataque + '<br>';
         let pFarmeo = document.createElement('p');//Creando el elemento p del farmeo
         pFarmeo.innerHTML ='Farmeo: '+this.farmeo + '<br>';
-
+        
         //Agregando los p al divChild
+        divchild.appendChild(spanStats);
         divchild.appendChild(pVida);
         divchild.appendChild(pAtaque);
         divchild.appendChild(pFarmeo);
         
-
+ 
         
         //Creando la card
         divmain.appendChild(this.image);
@@ -47,6 +55,7 @@ class Pakiman{
         divmain.appendChild(cabecera);
         divmain.appendChild(divchild);
         //Agregando al Body
+       
         document.body.appendChild(divmain);
         
         

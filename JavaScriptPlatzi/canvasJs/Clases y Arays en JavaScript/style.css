@@ -43,6 +43,8 @@
   */
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+   
+
   }
   /*
     9. Create a root stacking context
@@ -55,27 +57,107 @@
 
 /* Normal CSS */
 
+
+
 body{
+   
     font-size:1.5em;
     height: auto;
     width: 100vw;
     display:grid;
-    gap: 1vh;
-    grid-template-columns:repeat(4,1fr);
-
+    gap: 5vh;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-areas:
+    "  .   card1   ."
+    "card2 card3 card4"
+    "card5 card6 card7";
+    overflow-x: hidden;
     justify-content: space-around;
+    justify-items: center;
     align-items: center;
     align-items: stretch;
-
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
     background: #050505;
     color:#FAFAFA;
+    font-weight: 300;
+   
 }
 
+span{
+    font-weight: 600;
+    font-family: 'Hepta Slab', serif;
+    font-size: 24px;
+}
+  p{
+    font-weight: 100;
+    font-family: 'Hepta Slab', serif;
+    font-size: 16px;
+
+  }
+h1{
+  margin-top: -12vh;
+  justify-self: start;
+  font-family: 'Hepta Slab', serif;
+  font-weight: 600;
+}
+
+h2{
+  font-family: 'Hepta Slab', serif;
+  font-weight: 600;
+  text-align: center;
+}
+hr{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top:11vh;
+  right: 5%;
+  left: 5%;
+  width: 90%;
+}
+div.cardMain:nth-of-type(1){
+ justify-self: center;
+ grid-area: card1;
+}
+div.cardMain:nth-of-type(2){
+  justify-self: end;
+  grid-area: card2;
+ }
+
+div.cardMain:nth-of-type(3){
+  justify-self: center;
+  grid-area: card3;
+
+ }
+
+ div.cardMain:nth-of-type(4){
+  justify-self: start;
+  grid-area: card4;
+ }
+
+ div.cardMain:nth-of-type(5){
+  grid-area: card5;
+  justify-self: end;
+ }
+
+ div.cardMain:nth-of-type(6){
+  justify-self: center;
+  grid-area: card6;
+ }
+ div.cardMain:nth-of-type(7){
+  justify-self: start;
+  grid-area: card7;
+ }
+
+
 img{
-    width:330px;
-    height: 330px;
+    
     filter: sepia(100%);
     transition: all 0.5s;
+    object-fit:cover;
 }
 
 img:hover{
@@ -86,20 +168,25 @@ img:hover{
 
 .cardMain{
     background: #1C1C1C;
-    /* height: 379px;
-    width: 300px; */
+    width: 360px;
     border-radius:10px;
     transition:background 0.8s;
     overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(111, 100, 100, 0.2) 0px 7px 29px 0px;
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-direction: column;
-
     position: relative;
+    padding: 1em;
 
 }
+
+
+
 .card{
-    border: 1px solid red;
-}
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+    padding: 13px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
