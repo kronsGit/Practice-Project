@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+<body>
+    <h1>Arreglos</h1>
+    <script>
+        const a = []; //Esto es un arreglo
+        const b = [1,true,"Hola",["A","B","C",[1,2,3]]];//Un arreglo puede tener varios tipos de elementos, incluyendo otros arreglos
+        //Como todo tipo de datos compuesto a los arreglos se accede por una referencia 
+
+        console.log(a);
+        console.log(b); //Muestra todo el arreglo
+        console.log(b.length);//Muestra la cantidad de elementos en el arreglo
+        console.log(b[2]); //Muestra el contenido del arreglo en la posicion [2]
+        console.log(b[0]); //Muestra el contenido del arreglo en la posicion [0]
+        console.log(b[3][2]);//Muestra el contenido del arreglo en un arreglo
+        console.log(b[3][3][0]);//Muestra el contenido del arreglo en un arreglo en un arreglo
+
+        //Cargar valores en un Array desde ES6 2015
+        const c = Array.of("X","Y","Z",1,2,3);
+        console.log(c);
+
+        //Cargar valores en un array usando fill
+        const d = Array(100).fill("Ye ye ye");
+        console.log(d);
+
+        //Algunos metodos en los Arreglos
+        const colores = ["Rojo","Azul","Verde"];
+        console.log(colores);
+        
+        //Metodo push
+        colores.push("Negro");//Agrega este el elemtno al final de arreglo
+        console.log(colores);
+
+        //Metodo Pop
+        colores.pop();//Eliminar el elemento que este al final de arreglo
+
+        //Metodo forEach
+        //El forEach funciona como un ciclo for pero de esta forma podes utilizar funciones dentro del ciclo
+        colores.forEach(function (el,index){           //funcion para crear el elemtno y el indice del elemento
+        
+        /*De esta forma se imprimira todos los elementos de nuestro arreglo y se pondra un id diferente para cada uno de nuestros elementos*/
+        console.log(`<li id="${index}">${el}</li>`);                                            
+        });
+
+
+    </script>
+</body>
+</html>
