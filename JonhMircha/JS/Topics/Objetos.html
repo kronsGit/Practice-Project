@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos en JS</title>
+</head>
+<body>
+    <h1>Objetos en JavaScript</h1>
+    
+    <script>
+        //Para los objetos es recomendable usar const
+        const b = {} //Esto es un objeto
+        console.log(b);
+
+        //Un Objeto puede estar compuesto de multiples tipos de datos, funciones e incluso objetos
+        // Sintaxis: Primero se declara la variable luego el nombre del objeto luego = y luego los {}
+
+        /*Dentro de un objeto las varaibles se le van a llamar atributos o propiedades
+        y a las funciones se les llama metodos*/
+        const ivan = {
+            nombre: "Ivan",
+            apellido: "Rodriguez",
+            edad: 27,
+            pasatiempos:["Jugar videojuegos","Pixel Art","Baloncesto"],
+            soltero: false,
+            //Objeto
+            contacto:{
+                email:"ivan9424cat@gmail.com",
+                cel:505489878,
+                fb:"Kronstharor"
+            },
+            saludar:function(){
+                console.log('Hola soy una funcion');
+            },
+            /*La palabra reservada "this" hace referencia a una variable o atribueto del objeto en el que se encuentra, es decir para hacer uso de las variables del del objeto debemos utilizar la palabara this.atributo*/
+            decirMiNombre: function (){
+                console.log(`Hola mi nombre es ${this.nombre} uno de mis pasatiempos es ${this.pasatiempos[0]} y tengo la edad de ${this.edad} years`);
+            }
+        }
+
+        console.log(ivan);
+
+        //Acceder a los valores de un Objeto
+        //Los atributos son las variables que tiene dentro un objeto
+        //La funcion saludar(), ya no es un atributo es un metodo
+        console.log(ivan.nombre); //Se muestra el contenido de la viaraible nombre que pertenece al Objeto Ivan 
+        console.log(ivan.apellido);//Muestra el contenido del atributo que pertenece al Objeto Ivan
+        console.log(ivan.edad);//Muestra el contenido del atributo edad que pertenece al Objeto Ivan
+        console.log(ivan.pasatiempos[0]);//Muestra el contenido del atributo pasatiempo del Objeto Ivan por medio de referencia
+        console.log(ivan.soltero);//Muestra el contenido del atributo soltero del Objeto Ivan
+        console.log(ivan.contacto.email);//Muestra en contenido del Objeto contacto del objeto Ivan por medio de una referencia
+        console.log(ivan.contacto.cel);//Muestra en contenido del Objeto contacto del objeto Ivan por medio de una referencia
+        ivan.saludar();//Se ejecuta el un metodo (funcion) que pertenece al Objeto Ivan
+        ivan.decirMiNombre();
+        /*Utilizando la palabra this podemos hacer uso de los atributos dentro de un objeto, como en este caso que se utilizo para que el metodo (funcion) decirMiNombre() funcionara*/
+
+
+        //Metodos de los Objetos
+        console.log(Object.keys(ivan));//Muestra las llaves de un Objeto
+        console.log(Object.values(ivan));//Muestra los valores de un Objeto
+        console.log(ivan.hasOwnProperty("nombre"));
+        console.log(ivan.hasOwnProperty("nacionalidad"));
+
+
+
+    </script>
+</body>
+</html>
