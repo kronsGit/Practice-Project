@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Play', sans-serif;
+    overflow-y: hidden;
+    background: #1D1D1D;
+}
+
+figure{
+    /* background: red; */
+    position: relative;
+    /* width: 400px; */
+    height: 455px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(7,1fr);
+}
+img{
+    max-width: 100%;
+}
+
+.img-cajero{
+    width: 100%;
+    grid-row: span 4;
+    grid-column: span 4;
+}
+.resultado{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.681);
+    position: absolute;
+    /* top: 50px; */
+    grid-column:2/4;
+    grid-row:3/5;
+    
+    margin: 0;
+    color:rgb(2, 214, 2);
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:large;
+}
+
+
+
+/* CSS */
+
+
+/* CSS */
+.btn {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  background: black;
+  color: #696969;
+  transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+  /* background-color: #f7fafa; */
+  color:rgb(2, 214, 2);
+
+}
+
+.btn:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+
+/* Inputs */
+
+
+input[type="number"] {
+    display: block;
+    margin: 0.7em auto;
+    border: none;
+    padding: 0;
+    color:#fff;
+    width: 10.5ch;
+    background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/10ch 2px no-repeat;
+    font: 5ch droid sans mono, consolas, monospace;
+    letter-spacing: 0.5ch;
+  }
+  input:focus {
+    outline: none;
+  color: rgb(2, 214, 2);
+  }
