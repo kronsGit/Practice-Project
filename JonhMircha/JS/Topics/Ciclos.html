@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cic;os JS</title>
+</head>
+<body>
+    <h1>Ciclos JavaScript</h1>
+    <script>
+        // While
+        let contador = 0;
+        while (contador < 101) {
+            console.log(contador);
+            contador++;
+        }
+
+        // Do while
+        do{
+            console.log(contador);
+            contador++;
+        }while(contador < 10);
+
+        /*La diferencia entre usuar While y Do While es que en una estructura Do While al menos vamos a ejecutar la primera vez todo el bloque que este dentro del do, mientras que el While esta condicionado a que la condicion se cumpla */
+
+        // for
+        /*
+        for(inicializacion de variable;condicion;incremento o decremento){
+            sentencias que ejecuta el for
+            sentencias que ejecuta el for
+            sentencias que ejecuta el for
+        }
+        */
+        for(let i=0;i < 10;i++){
+            console.log("for "+i);
+        }
+
+        //Recorrer un arreglo con for
+        let numeros = [10,20,30,40,50,60,70,80,90,100];
+
+        for(let i=0;i < numeros.length;i++){
+            console.log(`Elementos del arreglo: ${numeros[i]}`);
+        }
+
+        //for in
+        /*
+        Un for in me va permitir recorer o iterar las propiedades de un Objeto, es algo asi como un for especial para un objeto
+        */
+
+        //Creando un Objeto 
+        const ivan = {
+            nombre: "Ivan",
+            apellido: "Juarez",
+            edad: 27
+        }
+        /*
+        - Se crea una variable key, en este caso es propiedad
+        - Se pone el objeto a evaluar
+        - Se coloca la variable propiedad para mostrar las propiedades del Objeto
+        -Se coloca la referencia ivan[propiedad] para mostrar los valores de cada propiedad, no se puede usar el tipo de referencia por "." porque da un error usando for in.
+
+        */
+        for (const propiedad in ivan) {
+            console.log(`Key: ${propiedad}`);
+            console.log(`Value: ${ivan[propiedad]}`);
+            console.log(``);
+        }
+
+        //For of
+        /*
+        El for of nos va permitir recorrer todos los elementos de cualquier objeto que sea iterable en JS ejemplo un arreglo
+        */
+
+        let colores = ['Rojo','Blanco','Amarillo','Verde','Negro'];
+        /*
+        Lo que le esta diciendo es que recorra cada elemento que se encuentra dentro de arreglo colores
+        - Luego se manda a llamar la variable "elementos"
+        */
+        for (const elementos of colores) {
+            console.log(elementos)
+        }
+
+        //Utilizando for of con una cadena de texto
+        let cadena = "Hola Mundo";
+        for (const caracter of cadena) {
+            console.log(caracter);
+        }
+    </script>
+</body>
+</html>
