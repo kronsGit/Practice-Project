@@ -13,16 +13,51 @@ body{
 }
 
 .cronometro{
-    width:300px;
-    background: red;
+  overflow: hidden;
+    width:550px;
+    /* background: red; */
     font-family: 'Montserrat', sans-serif;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "tiempo     tiempo    tiempo"
+    "item-start item-stop item-reiniciar";
     align-items: center;
     align-content: center;
     justify-content: center;
     padding: 2em;
+    gap: 10px 15px;
 }
 
+
+.start{
+  grid-area: item-start;
+  background-image: radial-gradient(100% 100% at 100% 0, #5af1ff 0, #3fa841 100%);
+}
+
+.start:hover{
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #09683c 0 -3px 0 inset;
+}
+
+.stop{
+  grid-area: item-stop;
+  background-image: radial-gradient(100% 100% at 100% 0, #f69b62 0, #cc3030 100%);
+
+}
+
+.stop:hover{
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #753607 0 -3px 0 inset;
+}
+.reiniciar{
+  grid-area: item-reiniciar;
+   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+}
+.text-tiempo{
+  font-size: 5rem;
+  grid-area: tiempo;
+  text-align: center;
+}
 
 
 
@@ -30,10 +65,10 @@ body{
 .boton {
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+ 
   border: 0;
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-shadow: rgba(22, 21, 22, 0.4) 0 2px 4px,rgba(36, 34, 42, 0.745) 0 7px 13px -3px,rgba(50, 54, 78, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -58,22 +93,13 @@ body{
   font-size: 18px;
 }
 
-.boton:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-}
+
 
 .boton:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  /* box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset; */
   transform: translateY(-2px);
 }
 
-.boton:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
-}
 
 
 
-.text-tiempo{
-    font-size: 5rem;
-}
