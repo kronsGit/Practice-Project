@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    
+    <title>Reloj</title>
+</head>
+<body>
+    <h1>Reloj en JavaScript</h1>
+
+    <script>
+        // Variables
+        let h = 0;
+        let m = 0;
+        let s = 0;
+
+        //Creando el contenedor boxReloj
+        let boxReloj = document.createElement('div');
+        boxReloj.setAttribute("class",`box-reloj`);
+
+        
+        let textTiempo = document.createElement('p');
+        textTiempo.setAttribute("class",`text-tiempo`);
+
+        //Mostrar en el Body en elemento boxReloj
+        document.body.appendChild(boxReloj);
+
+        document.write(`${h}:${m}:${s}`);
+    </script>
+</body>
+</html>
