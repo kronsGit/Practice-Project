@@ -9,29 +9,94 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     
-    <title>Reloj</title>
+    <title>Cronometro</title>
 </head>
 <body>
-    <h1>Reloj en JavaScript</h1>
+    <h1>Cronometro en JavaScript</h1>
+        <div class="cronometro">
+            <div id="hms"></div>
+            <div class="boton start">start</div>        
+            <div class="boton stop">stop</div>
+            <div class="boton reiniciar">reiniciar</div>
+        </div>
 
     <script>
-        // Variables
-        let h = 0;
-        let m = 0;
-        let s = 0;
+       window.onload = init;
+       /*Justo inmediatamente de cargarse el documento se ejecutara la funcion init*/
 
-        //Creando el contenedor boxReloj
-        let boxReloj = document.createElement('div');
-        boxReloj.setAttribute("class",`box-reloj`);
+       function init(){
+            document.querySelector(".start").addEventListener("click",cronometrar);
+            // document.querySelector(".stop").addEventListener("click",parar);
+            // document.querySelector(".reiniciar").addEventListener("click",reiniciar);
+            
+            h = 0;
+            m = 0;
+            s = 0;
+            document.getElementById("hns").innerHTML="00:00:00";
+       }
 
+       /*
+       En la funcion init asignamos eventos a cada unos de los botones.Son las funciones cronometrar(),parar(),reiniciar(). Haber usado querySelector o getElementById es para fines didacticos.
+
+       Las varaibles h,m,s no llevan la palabra let por delante de este modo conseguimos que sean globales
+       */
+
+
+       /*
+       Funcion Cronometrar, en primer lugar se llama a la funcion escribir() para que se ejecute inmediatamente.La funcion escribir agrega un segundo.
+
+       A continuacion se llama a setInterval(escribir,1000). Escribir no lleva parentesis porque queremos que se ejecute cada 1000 milisegundos y no inmediatamente la primera vez que se lea.
+
+       Se asigna el intervalo creando una variable de nombre id que nos servira en las funciones parar y reiniciar. Es una variable global se puede usar en cualquier lugar del programa
+
+       Una vez que se ha inciado la funcion cronometrar eliminamos la propiedad del boton de que al clicar se cree un nuevo elemento.De este modo evitamos que los segundos se vayan sumando mas de una vez a cada segundo 
+       */
+       const cronometrar = function(){
+        escribir();
+        id = setInterval(escribir,1000);
+        document.querySelector(".start").removeEventListener("click",cronometrar);
+    
+       }
+
+       const escribir = function(){
+        let hAux,mAux,sAux;
+        s++;
+
+        if(s>59){m++;s=0;}
+        if(m>59){h++;m=0;}
+        if(h>24){h=0;}
+
+        if(s<10){sAux="0"+s;}else{sAux=s;}
+        if(m<10){mAux="0"+s;}else{mAux=m;}
+        if(h<10){hAux="0"+s;}else{hAux=h;}
         
-        let textTiempo = document.createElement('p');
-        textTiempo.setAttribute("class",`text-tiempo`);
+        document.getElementById("hms").innerHTML = hAux + ":" + mAux + ":" + sAux;
+       }
 
-        //Mostrar en el Body en elemento boxReloj
-        document.body.appendChild(boxReloj);
+       /*
+       La funcion parar elimina el intervalo mediante clearInterval(id)
+       Una vez eliminado el intervalo el botón de iniciar requiere volver a funcionar y por tanto le asignamos de nuevo un evento mediante addEventListener().
+       */
+       const parar = function(){
+        clearInterval(id);
+        document.querySelector(".start").addEventListener("click",cronometrar);
+       }
 
-        document.write(`${h}:${m}:${s}`);
+       /*
+       Es muy parecida a la función parar.
+        Sin embargo en este caso asignamos el valor «0» a las variables globales h, m y s.
+    */
+
+    
+       const reiniciar = function(){
+        clearInterval(id);
+        document.getElementById("hms").innerHTML="00:00:00";
+        h = 0;
+        m = 0;
+        s = 0;
+        document.querySelector(".start").addEventListener("click",cronometrar);
+       }
+
     </script>
 </body>
 </html>
