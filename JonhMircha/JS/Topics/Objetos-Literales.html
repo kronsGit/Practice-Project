@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Literales</title>
+</head>
+<body>
+    <h1>Objetos Literales</h1>
+    <script>
+        // Objetos normal
+
+        let nombre = "Bobby",
+            edad = 11;
+        
+        //Objeto Perro 
+        const perro = {
+            nombre: nombre, //Propiedad del objetos se le asigna el valor de la variable
+            edad:edad,
+            ladrar:function(){      //Metodo de un Objeto
+                console.log("Guauu guau!!");
+            }
+        }
+
+        console.log(perro);
+        perro.ladrar();//Metodo
+
+        //Objetos Literales ES6
+        /*Si la varaible que tu vas a asignarle como valor a una propiedad del objeto tiene el mismo nombre de la propiedad que estas pretendiendo asignar usar esta forma*/
+        //Aqui lo que esta haciendo dinamicamente JS es entender que el nombre de la propiedad que le quieres asignar a la nueva propiedad de este objeto es igual al nombre de la variable y su valor sera el valor que se almacene en dicha variable 
+        const dog = {
+            nombre,
+            edad,
+            raza:"Callejero",
+            ladrar(){      //Metodo desde ES6
+                console.log("Guauu guau guau guau!!");
+            }
+        }
+
+        console.log(dog);
+        dog.ladrar();
+
+    </script>
+</body>
+</html>

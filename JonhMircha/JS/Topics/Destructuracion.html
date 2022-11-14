@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuracion</title>
+</head>
+<body>
+    <h1>Destructuracion en JavaScript</h1>
+    <script>
+        /*Destructuracion*/
+        //Yo tengo la necesidad de guardar cada uno de los valores del arreglo en variables diferentes
+        const numeros = [1,2,3];
+
+        //Sin utilizar la destructuracion
+        let uno = numeros[0],
+            dos = numeros[1],
+            tres = numeros[2];
+        
+        console.log(uno,dos,tres); //---> 1 2 3
+
+        //Ahora usando la destructuracion 
+        const [one,two,three] = numeros; 
+        /*-Destructuracion dinamicamente a cada una de las posiciones de este arreglo las estoy guardando dinamicamente en one,two,three*/
+
+        console.log(one,two,three); //---> 1 2 3
+
+        //Tambien se puede usar con un Objeto por ejemplo yo tengo un Objeto y necesito guardar cada una sus propiedades en un varaibles cada una
+        const persona = {
+            nombre:"Ivan",
+            apellido:"Juarez",
+            edad:27
+        }
+
+        //Destructuracion
+        const {nombre,apellido,edad} = persona; 
+        console.log(nombre,apellido,edad);
+        /*Nota: Para que la destructuracion funcione en los objetos es muy importante que la varible que trato de crear se llame igual que la propiedad a la que se le hace referencia o aislar en una sola variable*/
+    </script>
+</body>
+</html>
