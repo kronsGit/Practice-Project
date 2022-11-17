@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros Rest</title>
+</head>
+<body>
+    <h1>Parametros Rest</h1>
+
+    <script>
+        /*
+        Los parametros Rest son una forma de virtualmente ir agregando parametros infinitos ya sea a una funcion o dentro de una variable, imaginate que tienees un arreglo pero no sabes exactamente cuantos valores vas a recibir y posteriormente con esos con esos valores vas a hacer operaciones 
+        */
+
+        function sumar(a,b,...c){
+            let result = a+b;
+            //Todo lo que llegue despues de b lo voy a tratar como si fuera un arreglo
+
+            /*Utilizando el metodo forEach que resive una funcioin en la cual yo puedo ejecutar por cada numero que venga despues de c  por ende en este caso se le sumara a lo que ya vale resultado*/
+            c.forEach(function(n){
+                result += n;
+            });
+
+            return result;
+        }
+
+        console.log(sumar(1,2));
+        console.log(sumar(1,2,3));
+        console.log(sumar(1,2,3,66,5,89));
+        console.log(sumar(1,2,37,78,9,8,788));
+
+
+
+    </script>
+</body>
+</html>
