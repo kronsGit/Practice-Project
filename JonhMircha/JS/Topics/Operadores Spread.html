@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Spread</title>
+</head>
+<body>
+    <h1>Operadores Spread</h1>
+
+    <script>
+        /*Operadores Spread o de Propagacion
+        Nos va a permitir que cuando una expresion la tengamos que expandir en situaciones que tengamos que guardar o almacenar multiples argunmentos lo padamos hacer.
+        Ejemplo: Imagina que ya tienes un arreglo con cierto numero de elementos pero en cierto momento recibes nuevos parametros entonces en lugar de estar haciendo concatenaciones o push a tus arreglos lo que puedes hacer es agregarle con el spread operator
+        */
+
+        const arr1 = [1,2,3,4,5],
+              arr2 = [6,7,8,9,10];
+        console.log(arr1,arr2);
+
+        //Un tercer arreglo que sera el resultado de unir los elementos de los dos arreglos anteriores y para esto utilizaremos el operador spread [...arr1,...arr2] de esta forma se uniran
+        const arr3 = [...arr1,...arr2];
+        console.log(arr3);
+    </script>
+</body>
+</html>
