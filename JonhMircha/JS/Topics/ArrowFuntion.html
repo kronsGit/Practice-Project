@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrows Funtion</title>
+</head>
+<body>
+    <h1>Arrow Funtion</h1>
+
+    <script>
+        /*
+        Es una nueva forma de definir funciones anonimas(funciones anonimas que sean expresadas), una funcion expresada se genera cuando a una variable le asignas el valor de una funcion anonima 
+        */
+
+        // Funcion anonima
+        const saludar = function(){
+            console.log(`Hola`);
+        }
+        saludar();
+
+        //Arrow funtion
+        const saludo = () =>{
+            console.log(`Hola soy una Arrow funtion`);
+        }
+        saludo();
+
+        //Arrow Funtion con parametros
+        const saludoParametros = (nombre) => {
+            console.log(`Hola ${nombre} soy una funcion con parametros`);
+        }
+        saludoParametros("Ivan");
+
+        //Arrow Funtion retornando un valor
+        const sumar = (a,b) => a+b;
+        console.log(sumar(14,23));
+
+        //Arrow Funtion varias lineas de codigo
+        const arrowVarias = () => {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        arrowVarias();
+
+        //Arrow Funtion usandolo en el forEach
+
+        const numeros = [1,2,32,5,6,8,9,10];
+
+        numeros.forEach( (el,index) => {
+            console.log(`${el} esta en la posicion ${index}`);
+        });
+
+        /*Nota: Las arrow funtions tienen la capacidad de capturar el contexto en que yo me encuentre.Como ejemplo es decir capturan el objeto this del contexto en el que se encuentre */
+
+        function perro(){
+            console.log(this);
+        }
+        perro();
+
+        //Objeto
+
+        const dog ={
+            nombre: `Bobby`,
+            //Usando esta forma se respeta la referencia que se hace al objeto es decir el this se mantiene en el contexto
+            ladrar:function(){
+                console.log(this)
+            }
+            // ladrar:()=>{
+            //     console.log(this)
+            // }
+            //Pero si usamos arrow funtion el objeto this es decir el contexto se vuelve global es decir Windows
+        }
+
+        dog.ladrar();
+    </script>
+</body>
+</html>
