@@ -11,6 +11,45 @@
 </body>
 
     <script>
+        /*
+        En POO (Programacion orientada a Objetos) hay 4 conceptos importantes que debemos entender:
+        -Clases: Es un modelo a seguir, es algo que nos sirve como machote, como un esquema o una plantilla para de ahi basarnos y poder generar instancias.
+
+        -Objetos: Un objeto es una instancia de una clase, es decir es una copia de ese modelo 
+            -Atributos: Es una caracteristica o propiedad del objeto (son variables dentro de un Objeto)
+            -Metodos:Son acciones  que un objeto puede realizar(son funciones dentro de un objeto)
         
+        Prototipos en JS: Es un mecanismo por el cual un objeto puede heredar atributos o metodos 
+        */
+
+        //Funcion Constructora donde asignamos metodos al prototipo no a la funcion como tal 
+
+        function Animal(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        //Metodos agregados al prototipo de la funcion contructura
+        Animal.prototype.sonar = function(){
+            console.log("Hago sonidos porque estoy vivo");
+        }
+        Animal.prototype.saludar = function(){
+            console.log(`Me llamo ${this.nombre}`);
+        }
+        //Estos metodos son parte de la funcion contructora pero estan fuera del constructor para solo utilizarse cuando se ncesite y asi mejorar el rendimiento de nuestro codigo
+
+        const snoppy = new Animal("Snoppy","Macho"),
+              lolaBunny = new Animal("Lola Bunny","Hembra");
+
+        console.log(snoppy);
+        console.log(lolaBunny);
+
+        snoppy.sonar();
+        snoppy.saludar();
+
+        lolaBunny.sonar();
+        lolaBunny.saludar();
+
     </script>
 </html>
