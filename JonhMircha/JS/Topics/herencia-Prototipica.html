@@ -10,7 +10,52 @@
     <h1>Herencia Prototipica</h1>
 
     <script>
-        
+         function Animal(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        //Metodos agregados al prototipo de la funcion contructura
+        Animal.prototype.sonar = function(){
+            console.log("Hago sonidos porque estoy vivo");
+        }
+        Animal.prototype.saludar = function(){
+            console.log(`Me llamo ${this.nombre}`);
+        }
+        //Estos metodos son parte de la funcion contructora pero estan fuera del constructor para solo utilizarse cuando se ncesite y asi mejorar el rendimiento de nuestro codigo
+
+        //Herencia Prototipica
+        function Perro(nombre,genero,tamanio){
+            this.super = Animal;
+            this.super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+
+        //Perro esta heredando de Animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro; //Al igualarlo al mismo contructor se estara jalando todas las caracteristicas de su prototipo padre, se pueden sobreescribir los metodos del padre Animal
+
+        //Sobreescrituras de metodos del Prototipo padre en el hijo
+        Perro.prototype.sonar = function (){
+            console.log("Soy un perro y mi sonido es un ladrido ");
+        }
+        Perro.prototype.ladrar = function(){
+            console.log("Gua guauu!!")
+        }
+
+
+        const snoppy = new Perro("Snoppy","Macho","Mediano"),
+              lolaBunny = new Animal("Lola Bunny","Hembra");
+
+        console.log(snoppy);
+        console.log(lolaBunny);
+
+        snoppy.sonar();
+        snoppy.saludar();
+
+        lolaBunny.sonar();
+        lolaBunny.saludar();
     </script>
 </body>
 </html>
