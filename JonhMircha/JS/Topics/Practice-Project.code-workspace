@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Practice-Project",
+			"path": "../../.."
+		},
+		{
+			"name": "Project Dogs",
+			"path": "../../../../../../Desktop/Project Dogs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Practice-Project"
+	}
+}
