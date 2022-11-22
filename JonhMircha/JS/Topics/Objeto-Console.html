@@ -8,5 +8,59 @@
 </head>
 <body>
         <h1>Objeto Console JS</h1>
+
+        <script>
+            console.log(console);
+            console.error("Esto es un error");
+            console.warn("Esto es un aviso");
+            console.info("Esto es un mensaje informativo");
+
+            let nombre = "Ivan",
+                apellido = "Juarez",
+                edad = 27;
+            console.log(nombre,apellido,edad);
+            console.dir(document);
+            console.clear();
+            console.group("Cursos que debo tomar");
+            console.log("Curso de Ingles");
+            console.log("Curso de JS");
+            console.log("Curso de Dise;o");
+            console.groupEnd();
+
+            const numeros = [1,2,3,4,5],
+                  vocales = ["a","e","i","o","u"];
+            
+            
+            console.table(numeros);
+            console.table(vocales);
+
+            const perro = {
+                nombre:"Boni",
+                raza:"Boxer",
+                color:"Cafe"
+            }
+
+            console.table(perro);
+
+            console.time("Cuanto tiempo tarda mi codigo");
+            // const arreglo = Array(10000);
+
+            // for(let i=0;i<arreglo.length;i++){
+            //     arreglo[i] = i;
+            // }
+            console.timeEnd("Cuanto tiempo tarda mi codigo");
+
+            for(let i=0;i<100;i++){
+                console.count("Codigo for:");
+                console.log(i);
+            }
+
+            //Mini Tests
+            let x=21,
+                y=2,
+                pruebaXY = "Se espera que X siempre sea menor que Y";
+            
+            console.assert(x<y,{x,y,pruebaXY});
+        </script>
 </body>
 </html>
