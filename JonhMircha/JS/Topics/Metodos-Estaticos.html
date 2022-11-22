@@ -8,5 +8,76 @@
 </head>
 <body>
     <h1>Metodos Estaticos,getters y setters</h1>
+
+    <script>
+
+    class Animal{
+        // Para recibir parametros las clases tiene que usar un metodo especial que se llama constructor
+        constructor(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+        sonar(){
+            console.log("Hago sonidos porque estoy vivo");
+        }
+        saludar(){
+            console.log(`Hola me llamo ${this.nombre}`);
+        }
+    }
+
+   
+
+    //Heredar con clases "extends"
+    class Perro extends Animal{
+        constructor(nombre,genero,tamanio){
+            //Super es un metodo que manda a llamar el constructor de la clase padre
+            super(nombre,genero);
+            this.tamanio = tamanio;
+            this.raza = null; //El valor de raza el inicio que se cree un perro va ser null
+
+        }
+
+        //Sobreescritura de metodo
+        sonar(){
+            console.log("Soy un perro y mi sonido es un ladrido");
+        }
+        ladrar(){
+            console.log("Guaa guauuu!!");
+        }
+
+        //Metodo Estatico: Se pueden ejecutar sin necesidad de instanciar la clase
+        static queEres(){
+            console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos");
+        }
+
+        //Metodos setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+        //Metodo obtenedor
+        get getRaza(){
+            return this.raza;
+        }
+
+        //Metodo Establecedor que modificque el valor de dicha propiedad
+        set setRaza(raza){
+            this.raza = raza;
+        }
+    }
+
+    Perro.queEres();
+
+    const mini = new Animal("Mini","Hembra"),
+          scooby = new Perro("Scooby","Macho","Grande");
+
+    console.log(mini);
+    console.log(scooby);
+
+    //Aunque son metodo los vamos a utilizar como atributos
+    console.log(scooby.getRaza);
+    scooby.setRaza = "Gran Danes";
+    console.log(scooby.getRaza);
+
+
+    </script>
 </body>
 </html>
