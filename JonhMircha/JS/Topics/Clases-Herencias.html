@@ -8,5 +8,51 @@
 </head>
 <body>
    <h1>Clases y Herencias en JS</h1>
+
+   <script>
+    //Las clases no reciben parametros
+    class Animal{
+        // Para recibir parametros las clases tiene que usar un metodo especial que se llama constructor
+        constructor(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        //Metodos, los metodos si pueden recibir parametros en caso de necesitarlos y los metodos ya no se duplican como pasaban en la forma anterior
+        sonar(){
+            console.log("Hago sonidos porque estoy vivo");
+        }
+
+        saludar(){
+            console.log(`Hola me llamo ${this.nombre}`);
+        }
+    }
+
+    const mini = new Animal("Mini","Hembra"),
+          scooby = new Perro("Scooby","Macho","Grande");
+
+    console.log(mini);
+    console.log(scooby);
+
+    //Super es un metodo especial tambien en la programacion orientada a objetos que nos permite invocar al contructor de la clase en este del contructor Animal
+
+    //Heredar con clases "extends"
+    class Perro extends Animal{
+        constructor(nombre,genero,tamanio){
+            //Super es un metodo que manda a llamar el constructor de la clase padre
+            super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+
+        //Sobreescritura de metodo
+        sonar(){
+            console.log("Soy un perro y mi sonido es un ladrido");
+        }
+        ladrar(){
+            console.log("Guaa guauuu!!");
+        }
+    }
+   </script>
 </body>
 </html>
