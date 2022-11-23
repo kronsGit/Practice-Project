@@ -1,4 +1,7 @@
+Nota: Ctrl + Shift + p  y teclar previer markdown 
+
 <!-- Headings -->
+
 # My titulo
 ## My titulo h2
 ### My titulo h3
