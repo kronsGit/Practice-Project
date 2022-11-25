@@ -4,18 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6</title>
+    <title>Aplicar Descuento</title>
 </head>
 <body>
-    <h1>Ejercicio 6</h1>
+    <h1>Aplicar Descuento</h1>
 
     <script>
-        
+        // Aplicacion de descuento
         // 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
 
+        //Arrow funtion
+        const aplicarDescuento = (precio = undefined, descuento = 0)=>{
+            if(precio === undefined)return console.warn("No ingresaste el precio del producto");
+            if(typeof precio !== "number") return console.error(`El valor ${precio} no es un numero`);
+            if(precio === 0)return console.error("El monto no puede ser 0");
+            if(Math.sign(precio)===-1)return console.error("No puedes ingresar numeros negativos");
+            if(typeof descuento !== "number") return console.error(`El valor ${descuento} no es un numero`);
+            if(Math.sign(descuento)===-1)return console.error(`No pudes ingresar numeros negativos en el descuento`)
 
+            //Operacion
+            return console.info(`$${precio} - ${descuento}% = $${precio-((precio*descuento)/100)}`);
+        }
 
-        // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+        aplicarDescuento();
+        aplicarDescuento("200");
+        aplicarDescuento(0);
+        aplicarDescuento(-100);
+        aplicarDescuento(1000,"20");
+        aplicarDescuento(1000,52);
+        aplicarDescuento(180,20);
+
     </script>
 </body>
 </html>
