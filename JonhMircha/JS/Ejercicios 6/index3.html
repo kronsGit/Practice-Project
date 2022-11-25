@@ -12,6 +12,37 @@
     <script>
 
         // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+        const calcularYears = (fecha = undefined) =>{
+            if(fecha === undefined) return console.warn("No ingresaste una fecha");
+            if(!(fecha instanceof Date))return console.error("El valor que ingresaste de la fecha una fecha valida"); //Validacion para objetos como Date
+            
+            let hoyMenoFecha = new Date().getTime() - fecha.getTime(),
+                dias = 1000*60*60*24, 
+                years = 1000*60*60*24*365,
+                diasHumanos = Math.floor(hoyMenoFecha/dias);
+                yearsHumanos = Math.floor(hoyMenoFecha/years);
+
+            
+            // let fecha = `${segundosHumanos} segundos, ${minutesHumanos} minutos, ${horasHumanos} horas, ${diasHumanos} dias, ${yearsHumanos} years`;
+
+            return (Math.sign(yearsHumanos) === -1 )
+            ? console.info(`Faltan ${Math.abs(yearsHumanos)} years para el ${fecha.getFullYear()}.`)
+            : (Math.sign(yearsHumanos) === 1)
+                ? console.info(`Han pasado ${yearsHumanos} years y ${diasHumanos} desde ${fecha.getFullYear()} `)
+                : console.info(`Estamos en el year actual ${fecha.getFullYear()}.`)
+            
+        }
+
+        calcularYears();
+        calcularYears(false);
+        calcularYears(new Date());
+        calcularYears(new Date(1994,11,25)); //Anio.mes,dia
+
+
+
+        
+
+
     </script>
 </body>
 </html>
