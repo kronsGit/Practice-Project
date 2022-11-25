@@ -1,7 +1,5 @@
 # Control SELECT
 
----
-
 Este otro objeto visual que podemos disponer en un FORM permite realizar la selección de un string de una lista y tener asociado al mismo un valor no visible. El objetivo fundamental en JavaScript es determinar qué elemento está seleccionado y qué valor tiene asociado. Esto lo hacemos cuando ocurre el evento onChange.
 
 Para determinar la posición del índice seleccionado en la lista:
