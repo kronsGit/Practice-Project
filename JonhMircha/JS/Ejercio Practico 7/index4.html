@@ -9,23 +9,30 @@
 <body>
     <script>
         //19 y20
-        const validarEmail = (email = "")=>{
-            if(!email) return console.warn("Ingresaste una cadena de texto vacia");
-            if(typeof email !== "string") return console.error(`El valor ingresado ${email}, no es una cadena de texto`);
+        const validarPatron = (cadena = "",patron = undefined)=>{
+            if(!cadena) return console.warn("Ingresaste una cadena de texto vacia");
+            if(typeof cadena !== "string") return console.error(`El valor ingresado ${cadena}, no es una cadena de texto`);
+
+            if(patron === undefined) return console.warn("No ingresaste un patron a evaluar");
+            //Verifica si el tipo de cadena ingresada es una expresion Regular
+            if(!patron instanceof RegExp) return console.error(`El valor ${patron}, no es una expresion reguglar`);
+
 
             //Expresion Regular ^:No permite especios antes de, \s: permite espacios en este caso para usar un segundo email, +:itera
-            let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+            let expReg = patron.test(cadena);
 
             //Operador Ternario va a evaluar si se cumple la expresion regular
             return (expReg)
-            ? console.info(`"${email}", el email es valido`)
-            : console.info(`"${email}", el email es invalido`);
+            ? console.info(`"${cadena}", Cumple con el patron`)
+            : console.info(`"${cadena}", No cumple con el patron`);
         }
 
-        validarEmail();
-        validarEmail(34);
-        validarEmail("jon,mir,cha@gmail");
-        validarEmail("iva94cat@gmail.com");
+        validarPatron();
+        validarPatron(34);
+        validarPatron("Ivan Juarez",/^[A-Za-z\s]+$/g);
+        validarPatron("iva94cat@gmail.com",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i);
+        validarPatron("iva94cat@gmailcom",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i);
+
 
 
 
