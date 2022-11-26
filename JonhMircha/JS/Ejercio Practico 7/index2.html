@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocales Consonantes</title>
+</head>
+<body>
+    <script>
+        // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+        //Arrow funtion
+        const validarNombre = (nombre = "")=>{
+            if(!nombre) return console.warn("Ingresaste una cadena de texto vacia");
+            if(typeof nombre !== "string") return console.error(`El valor ingresado ${nombre}, no es una cadena de texto`);
+
+            //Expresion Regular ^:No permite especios antes de, \s: permite espacios en este caso para usar un segundo nombre, +:itera
+            let expReg = /^[A-Za-z\s]+$/g.test(nombre);
+
+            //Operador Ternario va a evaluar si se cumple la expresion regular
+            return (expReg)
+            ? console.info(`"${nombre}", el nomnbre es valido`)
+            : console.info(`"${nombre}", el nombre es invalido`);
+        }
+
+        validarNombre();
+        validarNombre(3);
+        validarNombre("Ivan Salvador");
+        validarNombre("Ivan Salvador,27");
+
+
+
+
+        // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+    </script>
+</body>
+</html>

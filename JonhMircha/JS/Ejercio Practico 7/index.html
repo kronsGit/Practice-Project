@@ -15,8 +15,47 @@
             if(!cadena) return console.warn("No ingresaste una cadena de texto");
             if(typeof cadena !== "string") return console.error("El tipo de dato ingresado no es un string");
             
-            let 
+            //Varaibles que serviran de contador
+            let vocales = 0,
+                consonantes = 0;
+
+            //Metodo para volver las letras en minuscula cuando se en ingresen caracteres
+            cadena = cadena.toLocaleLowerCase();
+
+            //For of
+            for (let letra of cadena) {
+                //Expresion regular
+                /*Esta expresion va a recorrer toda la cadena iterando con letra y checheando si en la cadena se encuentran
+                aeiou
+                */
+                if(/[aeiou]/.test(letra)){
+                    vocales++;
+                }
+
+                //Expresion regular para hacer evaluar cuantas constantes tiene
+                if(/[bcdfghjklmnpqrstvwxyz]/.test(letra)){
+                    consonantes++;
+                }
+            }
+
+            //Ahora lo devolveremos como un objeto, el atributo tiene la mismo nombre de la varaible porque se puede hacer asi desde ES6
+            return console.info({
+                cadena,
+                vocales,
+                consonantes
+            });
         }
+
+        contarLetras();
+        contarLetras(5);
+        contarLetras("Hola mundo");
+        contarLetras("Te amo Sofia");
+
+
+
+        
+
+
 
         // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
 
