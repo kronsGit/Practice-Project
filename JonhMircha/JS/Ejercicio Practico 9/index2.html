@@ -7,12 +7,39 @@
     <title>Ejercicios JavaScript</title>
 </head>
 <body>
-    <h1>Ordenamiento de Arreglo</h1>
+    <h1>Valores sin repetir</h1>
     <script>
     // 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+    
+    const quitarDuplicados = (arr = undefined) =>{
+        //Si la funcion vivne sin parametros
+        if(arr === undefined) return console.warn("No se ingreso un valor al arreglo");
+        //Si el tipo de Objeto no es un Array
+        if(!(arr instanceof Array)) return console.error(`El valor ${arr}, no es un arreglo`);
+        //Si se ingresa un arreglo vacio
+        if(arr.length === 0) return console.error("El arreglo esta vacio");
+        //Si se ingresa solo un valor al arreglo
+        if(arr.length ===1) return console.warn("El arreglo debe tener al menos 2 elementos");
 
+        //Solucion
+        /*
+        return console.info({
+            origin: arr,
+            sinDuplicados: arr.filter((value,index,self)=>self.indexOf(value)===index)//Evaluara si hay datos repetidos
+        });*/
+        // Usando SET
+        return console.info({
+            origin: arr,
+            sinDuplicados:[new Set(arr)]   //Set por naturaleza no permite valores repetidos
+        });
 
-
+    }
+    
+    quitarDuplicados();
+    quitarDuplicados({});
+    quitarDuplicados([]);
+    quitarDuplicados([2]);
+    quitarDuplicados(["x",2,34,5,2,3,5,true,false,3,true]);
 
     // 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
     </script>
