@@ -7,11 +7,40 @@
     <title>Ejercicios JavaScript</title>
 </head>
 <body>
-    <h1>Valores sin repetir</h1>
+    <h1>Promedio</h1>
     <script>
     // 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
-    
+    const promedio = (arr = undefined) => {
+        //Validaciones
+        if(arr === undefined) return console.warn("No ingresaste valores al parametro");
+        if(!(arr instanceof Array)) return console.error("No ingresaste un tipo de dato Arreglo");
+        if(arr.length === 0) return console.warn("El arreglo no puede estar vacio");
+        //Verificar que el tipo de dato sea un numero
+        for (let num of arr) {
+            if(typeof num !=="number") return console.error("Solo se permite ingresar numeros al arreglo");
+        }
+
+        return console.info(
+            /*Reduce va a generar un nuevo arreglo,reduce es un metodo que va a recibir una funcion, la varaible "total" servira como acumulador, "num" seria el elemento que se esta recorriendo en ese momento, index posicion que ocupa este elemento,y luego arr que es el arrreglo como tal*/
+            arr.reduce((total,num,index,arr)=>{
+                total += num;
+                if(index === arr.length-1){
+                    return `El promedio de ${arr.join(" + ")} es ${total/arr.length}`;
+                }else{
+                    return total;
+                }
+            })
+        )
+    }
+
+    promedio();
+    promedio({});
+    promedio([9,8,8,9,8,10,10]);
+
+
+
+
     </script>
 </body>
 </html>
