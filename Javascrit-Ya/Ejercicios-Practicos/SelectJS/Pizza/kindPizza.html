@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What kind of pizza do you want?</title>
+</head>
+<body>
+    <h1>What kind of pizza do you want?</h1>
+
+    <section>
+        <form action="">
+            <select id="pizza" onchange="mostrarPrecioPizza()">
+                <option value="180">Jamon y Queso</option>
+                <option value="200">Peperoni</option>
+                <option value="350">Peperoni con borde de Queso</option>
+                <option value="450">Muzzarella con Hongos</option>
+            </select>
+
+            <div>
+                <input type="text" value="" id="message">
+            </div>
+        </form>
+    </section>
+    <script>
+        // Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas (Jamón y Queso, Muzzarella, Morrones). Al seleccionar una, mostrar en un objeto de tipo TEXT el precio de la misma.
+
+        //Arrow funtion
+        const mostrarPrecioPizza = () =>{
+            let mensaje = document.getElementById('message').value;
+            mensaje = document.getElementById('pizza').options[document.getElementById('pizza').selectedIndex].value;
+        }
+
+    </script>
+</body>
+</html>
