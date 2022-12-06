@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Vazirmatn:wght@200;600&display=swap" rel="stylesheet">
+    <title>CPU cost</title>
+</head>
+<body>
+    <section class="form">
+        <h1>Budget for CPU</h1>
+        <form action="">
+            <p>Processor:</p>
+             <div class="box-processor">
+                <select id="processor">
+                    <option value="400">Intel i3</option>
+                    <option value="600">Intel i5</option>
+                    <option value="800">Intel i7</option>
+                </select>
+             </div>
+    
+             <p>Monitor:</p>
+             <div class="box-monitor">
+                <select id="monitor">
+                    <option value="250">Monitor Samsung 20'</option>
+                    <option value="350">Monitor Samsung 22'</option>
+                    <option value="550">Monitor Samsung 26'</option>
+                </select>
+             </div>
+    
+             <p>SSD:</p>
+             <div class="box-ssd">
+                <select id="ssd">
+                    <option value="300">SSD 500 GB</option>
+                    <option value="440">SSD 1 TB</option>
+                    <option value="500">SSD 3 TB</option>
+                </select>
+             </div>
+             <div class="box-buttons">
+                <input type="button" value="Calculate Budget" onclick="calculateBudget()">
+                <input type="text" id="result">
+             </div>
+        </form>
+    </section>
+
+    <script>
+        let calculateBudget = ()=>{
+            let processor = document.getElementById('processor'); //Save to a varaible
+            let price1 = processor.options[processor.selectedIndex].value;//Save the price
+            let monitor= document.getElementById('monitor'); //Save to a varaible
+            let price2 = monitor.options[monitor.selectedIndex].value;//Save the price
+            let ssd= document.getElementById('ssd'); //Save to a varaible
+            let price3 = ssd.options[ssd.selectedIndex].value;//Save the price
+
+            //Convert String to Numbers
+            price1 = parseInt(price1);
+            price2 = parseInt(price2);
+            price3 = parseInt(price3);
+
+            let suma = price1+price2+price3;
+
+            //Write on screen 
+            document.getElementById('result').value = suma;
+
+        }
+    </script>
+</body>
+</html>
