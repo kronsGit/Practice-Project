@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia en JS</title>
+</head>
+<body>
+    <h1>Asincronia JS</h1>
+
+    <script>
+        console.log("Inicio");
+
+        //setTimeout
+        setTimeout(() => {
+            console.log("Ejecutando el setTimeout esto se ejecutara solo una vez, con un delay de 3000ms")
+        }, 3000);
+
+        //setInterval
+        setInterval(() => {
+            console.log("Ejecutando un setInterval, esto se ejecutara indefinidamente cada cierto tiempo definido en milisegundos")
+        }, 1000);
+
+        //ClearTimeout: esta funcion cancela el setTimeout pero para que funcion se debe guardar en una variable
+        let temporizador = setTimeout(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+        clearTimeout(temporizador);
+
+        //ClearInterval: esta funcion cancela el setInterval pero para que funcion se debe guardar en una variable
+        let temporizador2 = setInterval(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+        clearInterval(temporizador2);
+        
+    </script>
+</body>
+</html>
