@@ -31,9 +31,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 
 
+<br>
+<br>
 
-
-Lists
+# *Lists*
 
 1. First ordered list item
 2. Another item
@@ -52,8 +53,10 @@ Lists
 - Or minuses
 + Or pluses
 
+<br>
+<br>
 
-Links
+# *Links*
 
 [I'm an inline-style link](https://www.google.com)
 
@@ -77,8 +80,10 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
+<br>
+<br>
 
-Images
+# *Images*
 
 Here's our logo (hover to see the title text):
 
@@ -90,8 +95,10 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
+<br>
+<br>
 
-Code and Syntax Highlighting
+# *Code and Syntax Highlighting*
 
 Inline `code` has `back-ticks around` it.
 
@@ -110,8 +117,10 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
+<br>
+<br>
 
-Footnotes
+# *Footnotes*
 
 Here is a simple footnote[^1].
 
@@ -126,8 +135,10 @@ You can also use words, to fit your writing style more closely[^note].
     Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
     This footnote also has been made with a different syntax using 4 spaces for new lines.
 
+<br>
+<br>
 
-Tables
+# *Tables*
 
 Colons can be used to align columns.
 
@@ -147,18 +158,26 @@ Markdown | Less | Pretty
 1 | 2 | 3
 
 
-Blockquotes
+<br>
+<br>
+
+# *Blockquotes*
 
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
-Quote break.
+<br>
+<br>
+
+# *Quote break.*
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
 
+<br>
+<br>
 
-Horizontal Rule
+# *Horizontal Rule*
 
 Three or more...
 
@@ -174,9 +193,11 @@ ___
 
 Underscores
 
+<br>
+<br>
 
 
-Line Breaks
+# *Line Breaks*
 
 Here's a line for us to start with.
 
@@ -185,8 +206,10 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
+<br>
+<br>
 
-YouTube Videos
+# *YouTube Videos*
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
 " target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
