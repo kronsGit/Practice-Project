@@ -1,4 +1,4 @@
-Headers
+#Headers
 
 # H1
 ## H2
@@ -15,7 +15,7 @@ Alt-H1
 Alt-H2
 ------
 
-Emphasis
+#Emphasis
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
