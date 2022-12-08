@@ -35,4 +35,4 @@ El `Paralelismo` es cuando dos o mas tareas se ejecutan al mismo tiempo
 Se refiere a cuando tendra lugar la respuesta, sincrono significa que la respuesta sucede en el presente en el tiempo inmediato espera el resultado en tiempo presente, mientras que asincrono la respuesta sucede en un futuro, se ejecuta pero no sabe cuando vendra la respuesta es decir la operacion asincrona no va a esperar el resultado 
 
 
-
+> *JavaScript* usa un modelo asincrono y no bloqueante con un loop de eventos implementado en un solo hilo, (single thread) para operaciones de entrada y salida.
