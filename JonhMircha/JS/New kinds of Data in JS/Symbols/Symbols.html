@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+<body>
+    <h1>Symbols in Javascript</h1>
+    <script>
+        let id =Symbol("id");
+        let id2 =Symbol("id2");
+
+        console.log(id===id2);
+        console.log(id,id2);
+        console.log(typeof id,typeof id2);
+
+        const NOMBRE = Symbol("Nombre");
+        const SALUDAR = Symbol("Saludar");
+
+        const persona = {
+            [NOMBRE]: "Ivan",
+            edad: 27
+        }
+        console.log(persona);
+
+        persona.NOMBRE = "Ivan Juarez Rodriguez";
+        console.log(persona.NOMBRE);
+        console.log(persona[NOMBRE]);
+
+        //Metodo como Symbol
+        persona[SALUDAR] = function(){
+            console.log("Hola");
+        }
+
+        for (let propiedad in persona) {
+           console.log(propiedad);
+           console.log(persona[propiedad]);
+        }
+
+        console.log(Object.getOwnPropertySymbols(persona));
+
+    </script>
+</body>
+</html>
