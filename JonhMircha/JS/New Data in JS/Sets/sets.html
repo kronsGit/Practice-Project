@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets JS</title>
+</head>
+<body>
+    <script>
+        const set = new Set([1,2,3,3,4,true,true,false,{},{},"Hola"]);
+        console.log(set); 
+        console.log(set.size); //Para saber la longitud del set
+
+        //Agreagarle valores a mi set
+        const set2 = new Set();
+        set2.add(1);
+        set2.add(10);
+        set2.add("Saludos");
+        set2.add({});
+        set2.add(500);
+
+        console.log(set2);
+        console.log(set2.size);
+
+        //Recorrer los elementos del set con for of
+        for(item of set){
+            console.log(item);
+        }
+
+        //Recorre el set usando foreach
+        set2.forEach(item => console.log((item)));
+
+        //Acceder a la posicion en set 
+
+        //Primero lo  guardamos en una variable porque  se convertira en un arreglo
+
+        let arr = Array.from(set); //Convirtiendo el set en un array
+        console.log(arr);
+        console.log(arr[0]);
+        console.log(arr[2]);
+
+        set.delete(2);
+
+        //Has comprueba si un valor esta en el  set
+        console.log(set.has(4)); 
+
+        //Limpiar  un set
+
+        set2.clear();
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
