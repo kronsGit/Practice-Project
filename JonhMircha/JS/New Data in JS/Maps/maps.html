@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps en JavaScript</title>
+</head>
+<body>
+    <script>
+        let mapa = new Map(); //Creando un nuevo map
+        map.set("nombre","Ivan"); //Agregandole valores a la varaible map
+        map.set("apellido","Juarez");//Key/valor
+        map.set("edad",28);
+
+        console.log(mapa);
+        console.log(mapa.size);// Saber la longitud del mapa
+        console.log(mapa.has("correo")); // Verificando que la propiedad "correo" esta dentro del mapa
+        console.log(mapa.get("nombre"));  //Obteniendo el valor que hay en  la propiedad "nombre"
+        mapa.set("nombre","Ivan Salvador"); //Sobre escribir una propiedad
+        mapa.delete("apellido"); //Borrar una propiedad
+        console.log(mapa);
+
+        //Iterar un tipo de dato map for of usando destructuracion
+
+        for (let [key,value] of mapa) {
+            console.log(`Llave: ${key}, Valor: ${value}`); 
+        }
+
+        const mapa2 = new Map([
+            ["nombre","Bobby"],
+            ["edad","8"],
+            ["animal","perro"],
+            [null,"nulo"],
+
+        ]);
+
+        console.log(mapa2);
+
+        const llavesMapa2 = [...mapa2.keys()];  // De mapa2 alamacename las llaves 
+        const valoresMapa2 = [...mapa2.values()]; // Almacena los valores de mapas
+
+        console.log(llavesMapa2);
+        console.log(valoresMapa2);
+
+    </script>
+</body>
+</html>l
