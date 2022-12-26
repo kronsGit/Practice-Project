@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterables e Iterators</title>
+</head>
+<body>
+
+    <script>
+       const iterable = [1,2,3,4,5];
+       const iterable2 = "Hola Mundo";
+       const iterable3 = new Set([10,20,30,40,50]);
+       const iterable4 = new Map([
+        ["Nombre","Ivan"],
+        ["Edad",28]
+       ]);
+
+       //Accedemos al iterador del iterable
+       const iterador = iterable[Symbol.iterator]();
+       console.log(iterable);
+       console.log(iterador);
+
+       //Mostrar el recorrido
+       let next = iterador.next();
+       
+       //Miestras el done sea falso
+       while(!next.done){
+        console.log(next.value);
+        next = iterador.next();
+       }
+
+
+
+
+    </script>
+</body>
+</html>
