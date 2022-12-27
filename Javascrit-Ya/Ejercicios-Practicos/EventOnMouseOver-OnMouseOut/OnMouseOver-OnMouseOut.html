@@ -21,5 +21,19 @@
             document.getElementById('cuadrado1').style.backgroundColor = col;
         }
     </script>
+
+<!-- Las llamadas a las funciones las hacemos inicializando las propiedades onMouseOver y onMouseOut:
+
+<a href="#" onMouseOver="pintar('#f00')" onMouseOut="pintar('#000')">Rojo</a> -
+<a href="#" onMouseOver="pintar('#0f0')" onMouseOut="pintar('#000')">Verde</a> -
+<a href="#" onMouseOver="pintar('#00f')" onMouseOut="pintar('#000')">Azul</a>
+Definimos un elemento 'div' de color negro de 200 píxeles de ancho y alto:
+
+<div id="cuadrado1" style="background:#000;width:200px;height:200px"></div>
+La función 'pintar' recibe el color y accedemos a la propiedad 'style' y de esta a backgroundColor:
+
+        function pintar(col) {
+            document.getElementById('cuadrado1').style.backgroundColor = col;
+        } -->
 </body>
 </html>

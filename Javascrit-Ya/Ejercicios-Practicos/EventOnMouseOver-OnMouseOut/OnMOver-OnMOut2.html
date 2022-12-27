@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintar</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td onMouseOver="pintar(this,'#f00')" onMouseOut="pintar(this,'#fff')">rojo</td>
+            <td onMouseOver="pintar(this,'#0f0')" onMouseOut="pintar(this,'#fff')">verde</td>
+            <td onMouseOver="pintar(this,'#00f')" onMouseOut="pintar(this,'#fff')">azul</td>
+        </tr>
+    </table>
+
+    <script>
+        const pintar = (objeto, col)=> {
+            objeto.style.backgroundColor = col;
+        }
+    </script>
+
+<!-- La lógica es bastante parecida a la del primer problema, pero en éste le pasamos como parámetro a la función la referencia a la casilla que queremos que se coloree (this):
+
+<td onMouseOver="pintar(this,'#f00')" 
+    onMouseOut="pintar(this,'#fff')">rojo</td>
+<td onMouseOver="pintar(this,'#0f0')" 
+    onMouseOut="pintar(this,'#fff')">verde</td>
+<td onMouseOver="pintar(this,'#00f')" SS
+    onMouseOut="pintar(this,'#fff')">azul</td> -->
+</body>
+</html>
