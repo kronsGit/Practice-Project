@@ -11,20 +11,20 @@
     <!-- Para probar estos eventos implementaremos una página que cambie el color de un cuadrado de 200px de ancho y 200px de alto.
     Implementaremos una función que cambie el color con un valor que llegue como parámetro. Cuando retiramos la flecha del mouse    volvemos a pintar de negro el fondo de cuadrado: -->
 
-    <a href="#" onmouseover="url('')" onmouseout="pintar('#000')">Fer</a>
-    <a href="#" onmouseover="url('#0f0')" onmouseout="pintar('#000')">Chris</a>
-    <a href="#" onmouseover="url('#00f')" onmouseout="pintar('#000')">Gordo</a>
+    <a href="#" onmouseover="urls(`url('1.png')`)" onmouseout="pintar('#000')">Fer</a>
+    <a href="#" onmouseover="urls(`url('2.png')`)" onmouseout="pintar('#000')">Gordo</a>
+    <a href="#" onmouseover="urls(`url('3.png')`)" onmouseout="pintar('#000')">El Chris</a>
     <div id="cuadrado1" style="background:#000;background-size: cover;
                                width:200px;
                                height:200px;"></div>
 
     <script>
-        const url = (root)=>{
+        const urls = (root)=>{
             document.getElementById('cuadrado1').style.backgroundImage = root;
         }
-        const pintar = (col)=>{
-            document.getElementById('cuadrado1').style.backgroundColor = col;
-        }
+        // const pintar = (col)=>{
+        //     document.getElementById('cuadrado1').style.backgroundColor = col;
+        // }
     </script>
 </body>
 </html>
