@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnFocus - OnBlur</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="nombre" onfocus="vaciar(this)" value="Nombre">
+        <input type="text" id="edad" onfocus="vaciar(this)" value="mail">
+        <input type="button" value="Confirmar">
+        
+    </form>
+
+    <script>
+        const vaciar = ()=>{
+            control.value='';
+        }
+        const verificarEntrada = (control) =>{
+            alert("Ingreso:" + control.value);
+        }
+    </script>
+
+<!-- A cada control de tipo TEXT le inicializamos el eventos onFocus. También cargamos las propiedad value para mostrar un texto dentro del control. Le indicamos, para el evento onFocus la función vaciar, pasando como parámetro la palabra clave this que significa la dirección del objeto que emitió el evento. En la función propiamente dicha, accedemos a la propiedad value y borramos su contenido. Esto nos permite definir una única función para vaciar los dos controles. -->
+</body>
+</html>

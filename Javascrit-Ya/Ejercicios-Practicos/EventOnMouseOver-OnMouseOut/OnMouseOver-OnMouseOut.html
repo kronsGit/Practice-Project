@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnMouseOver - OnMouseOut</title>
+</head>
+<body>
+    
+    <!-- Para probar estos eventos implementaremos una página que cambie el color de un cuadrado de 200px de ancho y 200px de alto.
+    Implementaremos una función que cambie el color con un valor que llegue como parámetro. Cuando retiramos la flecha del mouse    volvemos a pintar de negro el fondo de cuadrado: -->
+
+    <a href="#" onmouseover="pintar('#f00')" onmouseout="pintar('#000')">Rojo</a>
+    <a href="#" onmouseover="pintar('#0f0')" onmouseout="pintar('#000')">Verde</a>
+    <a href="#" onmouseover="pintar('#00f')" onmouseout="pintar('#000')">Azul</a>
+    <div id="cuadrado1" style="background:#000;width:200px;height:200px"></div>
+
+    <script>
+        const pintar = (col)=>{
+            document.getElementById('cuadrado1').style.backgroundColor = col;
+        }
+    </script>
+</body>
+</html>
