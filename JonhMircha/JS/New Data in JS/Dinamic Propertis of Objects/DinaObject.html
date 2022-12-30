@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Properties  Object</title>
+</head>
+<body>
+    <script>
+        let aleatorio = Math.round(Math.random() *100+5); //Variable usada para generar un numero aleatorio
+        //Objeto Usuarios
+        const objUsuarios ={
+            [`id_${aleatorio}`]:"Valor aleatorio"
+        };
+        // console.log(objUsuarios);
+
+        const usuarios = ["Jon","Irma","Miguel","Karla","Marcos"];
+        usuarios.forEach((usuarios,index)=>objUsuarios[`id_${index}`]=usuarios);//Rellenando usuarios dinamicamente
+
+        console.log(objUsuarios);
+    </script>
+</body>
+</html>
