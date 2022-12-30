@@ -1,0 +1,19 @@
+
+/* SVG Style */
+.st0{
+    fill:#bd6363;
+}
+.st1{
+    fill:#000000;
+}
+
+.test{
+    fill: green;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+svg{
+    width: 500px;
+}
