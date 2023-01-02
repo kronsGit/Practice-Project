@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This in JS</title>
+</head>
+<body>
+    <script>
+        console.log(this);
+        console.log(window);
+        console.log(this === window);
+
+        //Scope por default de this
+        this.nombre = "Conntexto Global";
+        console.log(this.nombre);
+
+        //En la creacion de un funncion anonima sigue manteniendo el scope
+        function imprimir(){
+            console.log(this.nombre);
+        }
+        imprimir();
+
+        /*Al crear un objeto posee su propio  contexto, entonces el metetodo creado como funcion anonima 
+        cambia de contexto y ahora tiene el scope del objeto, entonces la variable nombre sera Contexto Objeto*/
+        const obj = {
+            nombre:"Contexto Objeto",
+            imprimir:function(){
+                console.log(this.nombre);
+            }
+        }
+
+        obj.imprimir();
+
+        const obj2={
+            nombre:"Contexto Objeto 2",
+            imprimir
+        }
+
+        obj2.imprimir();
+
+        //Un objeto usanndo arrow funtion para hacer su metodo mantiene el scope del this por defecto es decir el primer scope 
+        const obj3 ={
+            nombre:"Contexto  Objeto 3",
+            imprimir:()=>{
+                console.log(this.nombre);
+
+            }
+        }
+
+        obj3.imprimir();
+
+        //Una clase constructora crea su priopio scope 
+        function  Persona(nombre){
+            this.nombre = nombre;
+            // return console.log(this.nombre);
+
+            /*Cuadno retorna una funcion cambia el scope al global*/
+            // return function(){
+            //     console.log(this.nombre);
+            // }
+
+            /*Cuanndo se usa unna arrow funtionn, en este caso la arrow funtionn manntiene el scope de su clase constructora*/
+            return ()=>{console.log(this.nombre)}
+
+
+        }
+
+        let ivan = new Persona("Ivan");
+        ivan();
+
+    </script>
+</body>
+</html>
