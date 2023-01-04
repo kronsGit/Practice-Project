@@ -1,0 +1,11 @@
+{
+    "cadena":"Ivan",
+    "numero":35,
+    "booleano":true,
+    "arreglo":["comer",1,3,"amarillo"],
+    "objeto":{
+        "twitter":"@twitteracount",
+        "cel":"8812775"
+    }
+
+}

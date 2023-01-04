@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call,apply,bind</title>
+</head>
+<body>
+    <script>
+        console.log(this);
+        this.lugar = "Contexto Global";
+
+
+        function saludar(saludo,aQuien){
+            console.log(`${saludo}${aQuien} desde el ${this.lugar}`);
+        }
+
+        saludar("Hola","Bobby");
+
+        const obj = {
+            lugar:"Contexto Objeto"
+        }
+
+        /*Lo que hace el metodo call es poder utilizar la funncion saludar y mantener
+        el scope del Objeto "obj"*/
+        saludar.call(obj,"Hola","Ivan");
+
+        /*Apply hace lo mismo que call, la diferencia es la forma de ingresar los 
+        parametros en este caso de  apply se ingresa como arreglo*/
+        saludar.apply(obj,["Adios","MirCha"]);
+
+        //Bind
+        this.nombre = "Window";
+
+        const persona={
+            nombre:"Jon",
+            saludar:function(){
+                console.log(`Hola ${this.nombre}`)
+            }
+        }
+
+        persona.saludar();
+
+        //Lo que hace Bind es enlazar un contexto
+        const otraPersona ={
+            saludar:persona.saludar.bind(this)
+        }
+
+        otraPersona.saludar();
+
+    </script>
+</body>
+</html>
