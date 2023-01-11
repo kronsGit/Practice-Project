@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="line-container">
+        <svg  viewBox="0 0 245 2088" fill="none" preserveAspectRatio="xMidYMax meet">
+            <path d="M107.5 0.5V485C107.5 495.5 110.8 516.6 124 517C137.2 517.4 145.5 517.167 148 517L189.5 570.5L241.5 582C239.5 605.167 233.6 653.3 226 660.5C218.4 667.7 168.167 677.167 144 681C128.667 677.833 96.6 676.2 91 695C85.4 713.8 75 693.5 70.5 681L95 570.5C88.1667 598.833 72.9 656.5 66.5 660.5C58.5 665.5 36.5 672.5 23 673L7.49998 737C40.8333 734.333 107.5 733.6 107.5 752C107.5 770.4 107.5 1120.33 107.5 1293C107 1299 107.3 1311.8 112.5 1315C119 1319 84.5 1339 79 1355.5C73.5 1372 65.5 1390.5 65 1395.5C64.5 1400.5 25.5 1441.5 18 1470C10.5 1498.5 1.99998 1559 2.99998 1565.5C3.99998 1572 51 1577.5 65 1565.5C79 1553.5 68 1489.5 73.5 1464.5C79 1439.5 84.5 1355 98.5 1344C109.7 1335.2 119.833 1329.67 123.5 1328V1390C133.5 1389 156 1389.4 166 1399C178.5 1411 196 1459 209 1464.5C222 1470 206 1509 194.5 1516C183 1523 128 1523.5 123.5 1530.5C119.9 1536.1 120.333 1558.17 121 1568.5C113.5 1571.17 98.5 1583.3 98.5 1610.5C98.5 1637.7 98.5 1940.17 98.5 2088" stroke="red" stroke-width="8"/>
+        </svg>
+
+    </div>
+
+    <section class="one">
+        <h1 class="scroll" data-rate=".4" data-direction="vertical">Ocean Stuff</h1>
+    </section>
+
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="vertical">Omg Scroll</h1>
+        <p>Big watermark</p>
+    </section>
+
+    <script>
+        let path = document.querySelector('path');
+        let pathLength = path.getTotalLength();
+
+        path.style.strokeDasharray = pathLength + ' ' + pathLength; //Dibujar
+        path.style.strokeDashoffset = pathLength //Desdibujar
+
+        window.addEventListener('scroll',()=>{
+            let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            let drawLength = pathLength * scrollPercentage;
+            path.style.strokeDashoffset = pathLength - drawLength;
+
+            //Paralax Effect
+
+        const target = document.querySelectorAll('.scroll');
+
+            let index=0,length= target.length;
+
+            for(index; index < length; index++){
+                let pos = window.pageYOffset * target[index].dataset.rate;
+
+                if(target[index].dataset.direction === 'vertical'){
+                    target[index].style.transform = 'translate3d(0px,'+pos+'px,0px)';
+
+                }else{
+                    let posX = window.pageYOffset * target[index].dataset.ratex;
+                    let posY = window.pageYOffset * target[index].dataset.ratey;
+
+                    target[index].style.transform = 'translate3d('+posX+'px, '+posY+'px,0px)';
+
+                }
+            }
+    
+        });
+
+
+        
+
+
+    </script>
+</body>
+</html>
