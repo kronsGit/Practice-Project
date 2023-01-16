@@ -1,0 +1,79 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background:#1d202d;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+svg{
+    width: 600px;
+    align-self: center;
+    justify-self: center;
+}
+
+svg:hover #start{
+    animation-duration: 1.2s;
+        animation-name: animateStart;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* mix-blend-mode:overlay; */
+         transition: all 1s;
+
+}
+
+svg #start{
+  opacity: 0;
+  transform: translateX(0px)
+             translateY(0px);
+   
+  
+  
+}
+
+@keyframes animateStart {
+    from{
+        transform: translateX(0) translateY(0);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(-40px) translateY(20px);
+        opacity: 1;  
+    }
+}
+
+/* Colors */
+	.st0{enable-background:new    ;}
+	.st1{fill:#95CDE2;}
+	.st2{fill:#96CFE4;}
+	.st3{clip-path:url(#SVGID_2_);enable-background:new    ;}
+	.st4{fill:#608695;}
+	.st5{fill:#638A99;}
+	.st6{fill:#658D9D;}
+	.st7{fill:#6891A1;}
+	.st8{fill:#6B94A5;}
+	.st9{fill:#6E98A9;}
+	.st10{fill:#709BAC;}
+	.st11{fill:#739FB0;}
+	.st12{fill:#76A3B4;}
+	.st13{fill:#78A6B8;}
+	.st14{fill:#7BAABC;}
+	.st15{fill:#7EADC0;}
+	.st16{fill:#81B1C4;}
+	.st17{fill:#83B4C7;}
+	.st18{fill:#86B8CB;}
+	.st19{fill:#8ABED2;}
+	.st20{fill:#87B9CD;}
+	.st21{fill:#628999;}
+	.st22{fill:#809292;}
+	.st23{fill:#CCE7E4;}
+	.st24{fill:#CDE8E4;}
+	.st25{fill:#96ABAA;}
+	.st26{fill:#8EA2A1;}
+	.st27{fill:#7F9191;}
