@@ -111,3 +111,20 @@ Ahora veamos el archivo HTML completo donde además definiremos un objeto de la 
 </html>
 
 ```
+
+
+Para definir un objeto de la clase Cliente tenemos:
+    ```
+        let cliente1;
+        cliente1 = new Cliente('diego', 1200);
+    ```
+Luego las llamadas a métodos le antecedemos el nombre del objeto llamado cliente1:
+    
+        document.write('Nombre del cliente:' + cliente1.nombre + '<br>');
+        document.write('Saldo actual:' + cliente1.saldo + '<br>');
+        cliente1.depositar(120);
+        document.write('Saldo luego de depositar $120---->' + cliente1.saldo + '<br>');
+        cliente1.extraer(1000);
+        document.write('Saldo luego de extraer $1000---->' + cliente1.saldo + '<br>');
+    
+Podemos decir que la ventaja que podemos obtener con el planteo de clases es hacer nuestros programas mucho más organizados, entendibles y fundamentalmente poder reutilizar clases en distintos proyectos.
