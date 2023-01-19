@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1673942012736-e413ba24b928?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+    clip-path: circle(0px at center);
+}
+
+.container{
+    position: relative;
+    margin-top: 200vh;
+    background: #fff;
+    padding: 100px;
+}
+
+.container h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.title{
+    position: relative;
+    top: 250px;
+    z-index: 10;
+    font-size: 5rem;
+    text-align: center;
+    width: 100%;
+}
