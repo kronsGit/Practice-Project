@@ -19,9 +19,14 @@ PseudoElemento
 
 # CSS Cascada y Especificidad CSS
 
-!important                     ----- x 0 0 0 0
-Estilos en Linea               ----- x 0 0 0
-#id                            ----- x 0 0
-clases,atributos, Pseudoclases ----- x 0
-Elementos y Pseudoelementos    ----- x
-Selectores Universales         ----- 0
+-!important                     ----- x 0 0 0 0
+
+-Estilos en Linea               ----- x 0 0 0
+
+-#id                            ----- x 0 0
+
+-clases,atributos, Pseudoclases ----- x 0
+
+-Elementos y Pseudoelementos    ----- x
+
+-Selectores Universales         ----- 0
