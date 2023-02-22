@@ -25,9 +25,15 @@ const $cards = document.querySelector(".cards"), //Seleccionando el elemento con
 
      
       // $cards.insertAdjacentElement("afterbegin",$newCard); //Agregando la nueva Card
+      
       //Otra forma de agregar elementos
       // $cards.prepend($newCard); //Primer hijo de $cards
-      $cards.append($newCard);
+      // $cards.append($newCard); //Ultimo hijo de $cards
+      // $cards.before($newCard);//El elemento se coloca antes de la referencia $cards
+      $cards.after($newCard);//El elemento se coloca despues de la referencia $cards
+
+
+
       $newCard.insertAdjacentHTML("beforeend",$contentCard); //Agregando el contenido de la nueva card que en este caso es todo lo que contiene la variable $content Card
       $newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Nuevo Texto para Card");
 
