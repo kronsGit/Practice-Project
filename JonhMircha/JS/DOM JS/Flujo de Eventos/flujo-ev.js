@@ -1,22 +1,28 @@
+function flujoEventos(e){
+  console.log(`Hola, te saluda ${this.className},el click lo origino ${e.target.className}`);
+}
 
-//Forma antigua
+const $divsEventos = document.querySelectorAll(".eventos-flujo div") 
 
-const $cards = document.querySelector(".cards"), //Seleccionando el elemento con la clase card
-      $newCard = document.createElement("figure"), //Creando un elemento figure
-      $cloneCards = $cards.cloneNode(true); //Clonando los elementos creados
+console.log($divsEventos);
 
-      //Agregandole elementos a la nueva variable newCars
-      $newCard.innerHTML = `
-        <img src="https://placeimg.com/350/350/any" alt="Any">
-        <figcaption>Any</figcaption>
-      `;
-      $newCard.classList.add("card"); //Agregandole una clase a el elemento newCard
 
-    //   $cards.replaceChild($newCard,$cards.children[2]); //Replaza un elemento, primero se selecciona el padre y se usa el metodo, en los parametros del metodo se pone el nuevo elemento por el cual sera remplazado.
-    //   $cards.removeChild($cards.lastElementChild); //Aqui este removiendo el ultimo elemento del padre $cards
-      $cards.insertBefore($newCard,$cards.firstElementChild); //Aqui se esta agregando el newcard antes del primer elemento
-      document.body.appendChild($cloneCards);//Se esta agregando el body el nuevo elemento
-      
+
+$divsEventos.forEach((div) => {
+  //Fase de Burbuja,sigue el flujo como desde adentro
+  div.addEventListener("click",flujoEventos);
+  div.addEventListener("click",flujoEventos,false);
+
+  //Fase de captura
+  // div.addEventListener("click",flujoEventos,true); 
+  div.addEventListener("click",flujoEventos,{
+    capture:false,
+    once:true //Esto permite que el eventos solo se repita una vez en el flujo
+  });
+
+});
+
+
 
 
 
