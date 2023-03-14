@@ -1,10 +1,10 @@
 /*Header-1*/
-.menu-1 #menu-1-2282f41 li:last-child{
+.menu-1 #menu-1-2282f41 li.menu-item-51 {
 	display:none;
 }
 
 /* Header-2 */
-.menu-1 #menu-1-46eb0a3 li:last-child{
+.menu-1 #menu-1-46eb0a3 li.menu-item-51{
 	display:none;
 }
 
@@ -341,3 +341,19 @@ width: 10px;
 .gallery-nav li.gallery-item-selected{
 	background: #555;
 }
+
+/*Contact CSS*/
+
+.with_frm_style .frm_submit {
+    margin: auto;
+}
+.frm_submit button {
+    text-transform:uppercase;
+		font-family:'Montserrat';
+	  font-size:18px;
+	  font-weight:700;
+	  line-height:26px;
+		padding:20px 40px;
+		letter-spacing:3%;
+}
+
