@@ -1,8 +1,9 @@
 /* CSS */
-body{
-    font-size: 16px;
+html{
+    font-size: 18px;
 }
 
+/*Rem la diferencia entre un rem y em es que siempre va a mandater los 16px del padre raiz en este caso HTML es decir un rem en este caso siempre valdra 16px*/
 .text-container{
-   font-size: 1em;
+   font-size: 1rem;
 }
