@@ -66,13 +66,9 @@ body{
     grid-template-columns:repeat(3,1fr);
     grid-template-areas:
     "  .   title   ."
-    "card1   .     ."
-    "card2   .     ."
-    "card3   .     ."
-    "card4   .     ."
-    "card5   .     ."
-    "card6   .     ."
-    "card7   .     .";
+    "card1 card2 card3"
+    "card4 card5 card6"
+    "  .   card7   .";
     overflow-x: hidden;
     justify-content: space-around;
     justify-items: center;
@@ -131,12 +127,12 @@ div.cardMain:nth-of-type(1){
  grid-area: card1;
 }
 div.cardMain:nth-of-type(2){
-  justify-self: start;
+  justify-self: center;
   grid-area: card2;
  }
 
 div.cardMain:nth-of-type(3){
-  justify-self: start;
+  justify-self: end;
   grid-area: card3;
 
  }
@@ -148,15 +144,15 @@ div.cardMain:nth-of-type(3){
 
  div.cardMain:nth-of-type(5){
   grid-area: card5;
-  justify-self: start;
+  justify-self: center;
  }
 
  div.cardMain:nth-of-type(6){
-  justify-self: start;
+  justify-self: end;
   grid-area: card6;
  }
  div.cardMain:nth-of-type(7){
-  justify-self: start;
+  justify-self: center;
   grid-area: card7;
  }
 
