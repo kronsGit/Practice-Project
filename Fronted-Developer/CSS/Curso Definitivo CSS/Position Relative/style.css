@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.box-main{
+    padding: 30px;
+    border: 2.5px dotted gray;
+    width: 750px;
+    height: auto;
+}
+
+.item-1{
+    background: red;
+    color:white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    bottom:-25px;
+}
+
+.item-2{
+    background-color: gray;
+    color:white;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 20px;
+}
