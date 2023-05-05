@@ -57,10 +57,7 @@
 
 /* Normal CSS */
 
-
-
 body{
-   
     font-size:1.5em;
     height: auto;
     width: 100vw;
@@ -68,9 +65,14 @@ body{
     gap: 5vh;
     grid-template-columns:repeat(3,1fr);
     grid-template-areas:
-    "  .   card1   ."
-    "card2 card3 card4"
-    "card5 card6 card7";
+    "  .   title   ."
+    "card1   .     ."
+    "card2   .     ."
+    "card3   .     ."
+    "card4   .     ."
+    "card5   .     ."
+    "card6   .     ."
+    "card7   .     .";
     overflow-x: hidden;
     justify-content: space-around;
     justify-items: center;
@@ -97,11 +99,13 @@ span{
     font-size: 16px;
 
   }
-h1{
-  margin-top: -12vh;
+.title{
+  margin-top: -14vh;
   justify-self: start;
   font-family: 'Hepta Slab', serif;
   font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 h2{
@@ -118,17 +122,21 @@ hr{
   left: 5%;
   width: 90%;
 }
+
+.title{
+  grid-area:title;
+}
 div.cardMain:nth-of-type(1){
- justify-self: center;
+ justify-self: start;
  grid-area: card1;
 }
 div.cardMain:nth-of-type(2){
-  justify-self: end;
+  justify-self: start;
   grid-area: card2;
  }
 
 div.cardMain:nth-of-type(3){
-  justify-self: center;
+  justify-self: start;
   grid-area: card3;
 
  }
@@ -140,11 +148,11 @@ div.cardMain:nth-of-type(3){
 
  div.cardMain:nth-of-type(5){
   grid-area: card5;
-  justify-self: end;
+  justify-self: start;
  }
 
  div.cardMain:nth-of-type(6){
-  justify-self: center;
+  justify-self: start;
   grid-area: card6;
  }
  div.cardMain:nth-of-type(7){
@@ -168,7 +176,7 @@ img:hover{
 
 .cardMain{
     background: #1C1C1C;
-    width: 360px;
+    width: 300px;
     border-radius:10px;
     transition:background 0.8s;
     overflow: hidden;
@@ -179,7 +187,14 @@ img:hover{
     flex-direction: column;
     position: relative;
     padding: 1em;
-
+    background: url('./img/45-degree-fabric-dark.png');
+    border: 1px rgba(8, 8, 8, 0.533) solid;
+}
+.cardMain img{
+  width: 80%;
+  max-width: 200px;
+  min-width: 190px;
+  align-self: center;
 }
 
 
