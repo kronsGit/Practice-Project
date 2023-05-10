@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 62.5%; /*Esto es para utilizar rems con mas facilidad*/
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+.container{
+    border: 0.3rem solid black;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.box{
+    /* width: 10rem; */
+    height: 10rem;
+    flex-basis: 15rem; /*Estas propiedades permiten de que flexbox se connvierta en Responsive*/
+    flex-grow: 1;   /*Y le aplicamos un flex-grow uno para que cresza siempre el elemento*/
+    /*Para utilizar flex-basic los elementos no deben poseer width*/
+}
+
+
+.box1{
+    background-color: aquamarine;
+    /*Flex grow su funcion es que los elementos que lo tengan ocupen el espacio que sobra,normalmente se usan en los elementos hijos*/
+    flex-grow: 1;
+}
+
+.box2{
+    background-color: blue;
+    flex-grow: 1;
+}
+
+.box3{
+    background-color: violet;
+}
+.box4{
+    background-color: burlywood;
+}
+.box5{
+    background-color: cadetblue;
+}
+
+.box6{
+    background-color: chocolate;
+}
+
+
