@@ -12,3 +12,11 @@ undefined
 
 /*Objeto*/ [1,2,3];
 /*Objeto*/ {nombre:"Diego"};
+
+let nombre = "Ivan";
+let edad = 30;
+let elementos = ["Computadora","Celulares"];
+let persona = {
+    nombre: "Diego",
+    edad:30
+}
