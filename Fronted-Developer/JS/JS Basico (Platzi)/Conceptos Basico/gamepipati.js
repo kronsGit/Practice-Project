@@ -1,6 +1,7 @@
 
 let gamePiPaTi = (op) =>{
-    cpu = Math.round(Math.random()*2);0
+    //Eleccion aleatoria de la Cpu
+    cpu = Math.round(Math.random()*2);
     console.log(cpu);
     let message;
 
@@ -44,7 +45,12 @@ let gamePiPaTi = (op) =>{
     return message;
 }
 
+//Ejemplo:
 gamePiPaTi("Papel");
+gamePiPaTi("Piedra");
+gamePiPaTi("Tijeras");
+
+
 
 
 
