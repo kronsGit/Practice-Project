@@ -10,8 +10,9 @@ let compras = [
 
 //Metodo filer
 let articulosFilter = compras.filter(function(articulo){
-    return articulo.costo <= 1500;
+    return articulo.costo <= 1500; //Regresa los articulos que sean menor o igual a 1500
 });
+//Filter crea un nuevo array en donde se agregan los elementos que cumplen con la validacion 
 
 for(let i=0;i < articulosFilter.length;i++){
     console.log(articulosFilter[i]);
