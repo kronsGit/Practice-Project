@@ -4,6 +4,9 @@ let numArray = [1,2,3,4,5];
 //funcion
 let newNum = ()=>{
     //Agregando elementos
-    numArray.push(6,7);
+    numArray.push(6,7,"Palabra",[40,50,60]);
     //Verificacion
+    console.log(numArray);
 }
+
+newNum();
