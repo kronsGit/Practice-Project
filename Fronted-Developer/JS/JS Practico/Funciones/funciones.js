@@ -22,5 +22,5 @@ nombreCompleto("Juan","Guerrero");
 nombreCompleto(nombre,apellido);
 
 
-//Saludo
+//Funcion Saludo
 saludo("Ivan","Juarez","Kronstharor");
