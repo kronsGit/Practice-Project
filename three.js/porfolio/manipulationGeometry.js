@@ -15,8 +15,9 @@ const planeGeometry = new THREE.PlaneGeometry( 5, 5, 10,10 ); //Unit,width,heigh
 const planeMaterial = new THREE.MeshPhongMaterial( {
      color: 0xff0000,
      side: THREE.DoubleSide,
-    //  flatShading: THREE.FlatShading
-    flatShading: true
+    flatShading: true,
+    // wireframe:true,
+    // vertexColors:true
     });
 const planeMesh = new THREE.Mesh( planeGeometry, planeMaterial );//Creando el elementos
 scene.add( planeMesh ); //Agregando el elemento creado a la scena
@@ -31,7 +32,6 @@ for(let i=0;i < array.length; i+=3){
 
     array[i + 2] = z + Math.random();
 
-
 }
 
 
@@ -45,7 +45,7 @@ camera.position.z = 5;
 
 function animate() {
 	requestAnimationFrame( animate );
-    planeMesh.rotation.x += 0.01;
+    planeMesh.rotation.x += 0.03;
     planeMesh.rotation.y += 0.03;
 
     renderer.render( scene, camera );
