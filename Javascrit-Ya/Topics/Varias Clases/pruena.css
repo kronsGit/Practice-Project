@@ -1,0 +1,32 @@
+.box{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    "item-1  item-2    item-3"
+    "item-1  item-4    item-5" 
+    "item-1  s-iconsf  s-iconsf";
+}
+
+.item-1{
+    grid-area: item-1;
+}
+
+.item-2{
+    grid-area: item-2;
+}
+
+.item-3{
+    grid-area: item-3;
+}
+
+.item-4{
+    grid-area: item-4;
+}
+.item-5{
+    grid-area: item-5;
+}
+
+.social-iconsf{
+    grid-area: s-iconsf;
+}
