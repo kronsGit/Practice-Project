@@ -5,15 +5,17 @@
 // Creando clase
 class Pakiman{
     //Constructor
-    constructor(n,v,a,f){
+    constructor(n,v,a,f,btn){
         this.image = new Image();
         this.nombre=n;
         this.vida=v;
         this.ataque=a;
         this.farmeo=f;
-
+        this.button=btn;
         this.image.src = imagenes[this.nombre];
     }
+
+    //Metodos
     hablar(){
         alert(this.nombre);
     }
@@ -43,12 +45,19 @@ class Pakiman{
         pAtaque.innerHTML ='Ataque: '+this.ataque + '<br>';
         let pFarmeo = document.createElement('p');//Creando el elemento p del farmeo
         pFarmeo.innerHTML ='Farmeo: '+this.farmeo + '<br>';
+
+        //Creando Botton Info
+        let btnInfo = document.createElement('a');
+        btnInfo.href = 'https://www.magicpattern.design/tools/css-backgrounds';
+        btnInfo.textContent = "More info";
+        btnInfo.target="_blank";
         
         //Agregando los p al divChild
         divchild.appendChild(spanStats);
         divchild.appendChild(pVida);
         divchild.appendChild(pAtaque);
         divchild.appendChild(pFarmeo);
+        divchild.appendChild(btnInfo);
         
  
         

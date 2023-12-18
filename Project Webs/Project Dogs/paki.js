@@ -13,15 +13,13 @@ imagenes["Pipiya"] = "img/Bobby.png";
 // Creando un array para guardar a todos los elementos
 let desk = [];
 
-desk.push(new Pakiman("Bobby",100,50,"Nivel normal"));
+desk.push(new Pakiman("Bobby",100,50,"Nivel normal",));
 desk.push(new Pakiman("Hati",100,150,"Nivel experto"));
 desk.push(new Pakiman("Gurruminsota",130,100,"Nivel Dios"));
 desk.push(new Pakiman("Gurrumincita",70,80,"Nivel medio"));
 desk.push(new Pakiman("Silvestre",90,20,"Nivel Dios"));
 desk.push(new Pakiman("Panzer",50,40,"Nivel Dios"));
 desk.push(new Pakiman("Pipiya",90,90,"Nivel Dios"));
-
-
 
 // Mostrar los elementos de array
 
